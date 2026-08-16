@@ -233,3 +233,53 @@
     }
   }
 }
+
+@media (max-width: 430px) {
+  .projects {
+    padding: 60px 0;
+
+    &__inner {
+      padding: 0 20px;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__track {
+      padding: 4px 20px 24px;
+      margin: 0 -20px;
+    }
+
+    &__heading h2 {
+      font-size: 34px;
+    }
+
+    &__heading p {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    &__card {
+      flex: 0 0 270px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__description {
+      font-size: 12px;
+    }
+
+    &__tag {
+      font-size: 10.5px;
+      padding: 4px 10px;
+    }
+
+    &__link {
+      font-size: 11.5px;
+      padding: 8px 12px;
+    }
+  }
+}
