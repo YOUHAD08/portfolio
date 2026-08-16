@@ -79,3 +79,41 @@
     }
   }
 }
+
+@media (max-width: 430px) {
+  .contact {
+    &__inner {
+      padding: 60px 20px;
+    }
+
+    &__heading {
+      font-size: 34px;
+    }
+
+    &__tagline {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    &__email-btn {
+      font-size: 13.5px;
+      padding: 12px 22px;
+      margin-bottom: 24px;
+    }
+
+    &__socials {
+      gap: 10px;
+    }
+
+    &__social {
+      width: 40px;
+      height: 40px;
+
+      svg {
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+}
