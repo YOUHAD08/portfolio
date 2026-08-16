@@ -29,6 +29,8 @@ const CTA_LABEL = { en: 'Contact Me', fr: 'Me Contacter' };
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  mobileMenuOpen = false;
+
   constructor(public theme: ThemeService, public language: LanguageService) {}
 
   get navLinks() {
@@ -37,5 +39,13 @@ export class NavbarComponent {
 
   get ctaLabel(): string {
     return CTA_LABEL[this.language.lang()];
+  }
+
+  toggleMobileMenu(): void {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+  closeMobileMenu(): void {
+    this.mobileMenuOpen = false;
   }
 }

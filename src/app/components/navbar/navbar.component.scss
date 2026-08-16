@@ -1,4 +1,5 @@
 .navbar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,6 +10,42 @@
     display: flex;
     align-items: center;
     gap: 12px;
+  }
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+
+    span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    &.is-open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    &.is-open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.is-open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
   }
 
   &__avatar {
@@ -35,6 +72,12 @@
   }
 
   &__right {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+
+  &__toggles {
     display: flex;
     align-items: center;
     gap: 36px;
@@ -148,6 +191,100 @@
       width: 100%;
       justify-content: center;
       gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    padding: 16px 20px;
+    flex-wrap: nowrap;
+    background: transparent;
+    border-bottom-color: transparent;
+
+    &__name {
+      color: #fff;
+    }
+
+    &__avatar {
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &__hamburger {
+      display: flex;
+    }
+
+    &__hamburger span {
+      background: #fff;
+    }
+
+    &__link {
+      color: #fff;
+    }
+
+    &__lang-toggle {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #fff;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.22);
+      }
+    }
+
+    &__theme-track {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &__theme-icon {
+      color: #fff;
+    }
+
+    &__cta {
+      background: #fff;
+      color: #111111;
+    }
+
+    &__right.is-open {
+      background: rgba(10, 10, 10, 0.96);
+      border-bottom-color: rgba(255, 255, 255, 0.12);
+    }
+
+    &__right {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border-subtle);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+      &.is-open {
+        display: flex;
+      }
+    }
+
+    &__toggles {
+      gap: 16px;
+    }
+
+    &__links {
+      width: auto;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
     }
   }
 }
