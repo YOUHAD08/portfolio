@@ -556,7 +556,17 @@
 
 @media (min-width: 431px) and (max-width: 900px) {
   .all-projects {
+    padding-top: 105px;
+
+    &__inner {
+      position: relative;
+    }
+
     &__back {
+      position: absolute;
+      top: 15px;
+      right: 0;
+      margin-bottom: 0;
       font-size: 13.5px;
     }
 
