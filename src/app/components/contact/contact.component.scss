@@ -1,0 +1,81 @@
+.contact {
+  background: var(--bg-alt);
+
+  &__inner {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 100px 24px;
+    text-align: center;
+  }
+
+  &__pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    padding: 6px 14px;
+    margin-bottom: 18px;
+  }
+
+  &__heading {
+    font-size: 34px;
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+
+  &__tagline {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0 0 36px;
+  }
+
+  &__email-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--pill-text);
+    background: var(--pill-white);
+    border-radius: 999px;
+    padding: 14px 28px;
+    margin-bottom: 32px;
+    transition: transform 0.15s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    transition: background 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      background: var(--pill-white);
+      color: var(--pill-text);
+      border-color: var(--pill-white);
+      transform: translateY(-2px);
+    }
+  }
+}

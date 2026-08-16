@@ -1,0 +1,38 @@
+<section class="skills" id="skills">
+  <div class="skills__inner">
+    <div class="skills__header">
+      <span class="skills__pill">Tech Stack</span>
+      <h2 class="skills__heading">Tools I Build With</h2>
+      <p class="skills__tagline">
+        A curated set of technologies I rely on to build scalable,
+        cloud-native systems.
+      </p>
+    </div>
+
+    <div class="skills__category" *ngFor="let category of categories">
+      <div class="skills__sticky">
+        <h2 class="skills__category-title">{{ category.title }}</h2>
+      </div>
+
+      <div class="skills__rows">
+        <div class="skills__row" *ngFor="let skillRow of category.rows">
+          <div
+            class="skills__item"
+            *ngFor="let name of skillRow; let i = index"
+            [attr.data-index]="i"
+          >
+            <ng-container *ngIf="icon(name) as def">
+              <img *ngIf="def.img" [src]="def.img" [alt]="name" />
+              <svg *ngIf="!def.img" [attr.viewBox]="def.viewBox" xmlns="http://www.w3.org/2000/svg">
+                <path *ngFor="let p of def.paths" [attr.d]="p.d" [attr.fill]="p.fill"></path>
+              </svg>
+            </ng-container>
+            <span>{{ name }}</span>
+          </div>
+        </div>
+
+        <p class="skills__soon" *ngIf="!category.rows.length">Coming soon</p>
+      </div>
+    </div>
+  </div>
+</section>

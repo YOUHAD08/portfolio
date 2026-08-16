@@ -1,0 +1,42 @@
+<header class="navbar">
+  <a class="navbar__brand" routerLink="/">
+    <div class="navbar__avatar">
+      <img src="images/ayoub-photo.png" alt="Ayoub Youhad" />
+    </div>
+    <span class="navbar__name">Ayoub Youhad</span>
+  </a>
+
+  <div class="navbar__right">
+    <nav class="navbar__links">
+      <a *ngFor="let link of navLinks" [href]="link.href" class="navbar__link">{{ link.label }}</a>
+    </nav>
+
+    <button
+      class="navbar__lang-toggle"
+      (click)="language.toggle()"
+      [attr.aria-label]="language.lang() === 'en' ? 'Passer en français' : 'Switch to English'"
+    >
+      {{ language.lang() === 'en' ? 'FR' : 'EN' }}
+    </button>
+
+    <button
+      class="navbar__theme-toggle"
+      (click)="theme.toggle()"
+      [attr.aria-label]="theme.theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+    >
+      <span class="navbar__theme-track" [class.is-light]="theme.theme() === 'light'">
+        <svg class="navbar__theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+        <svg class="navbar__theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <span class="navbar__theme-thumb"></span>
+      </span>
+    </button>
+
+    <a href="#contact" class="navbar__cta">
+      {{ ctaLabel }}
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14"></path>
+        <path d="M12 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+</header>

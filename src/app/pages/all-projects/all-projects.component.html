@@ -1,0 +1,122 @@
+<section class="all-projects">
+  <div class="all-projects__inner">
+    <a class="all-projects__back" routerLink="/">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>
+      {{ t.backToHome }}
+    </a>
+
+    <div class="all-projects__header">
+      <h1>{{ t.heading }}</h1>
+      <p>{{ t.tagline }}</p>
+    </div>
+
+    <div class="all-projects__filterbar">
+      <button class="all-projects__filter-trigger" (click)="toggleFilterMenu()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 12h10M10 18h4"></path></svg>
+        <span>{{ triggerLabel }}</span>
+        <svg class="all-projects__filter-trigger-chevron" [class.is-open]="filterMenuOpen" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+      </button>
+
+      <div class="all-projects__filter-menu" *ngIf="filterMenuOpen">
+        <div class="all-projects__filter-menu-search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+          <input type="text" [placeholder]="t.searchPlaceholder" [(ngModel)]="tagSearch" autofocus />
+        </div>
+
+        <div class="all-projects__filter-menu-list">
+          <div class="all-projects__filter-menu-group" *ngFor="let group of menuGroups">
+            <button
+              class="all-projects__filter-menu-category"
+              [class.is-active]="isCategoryFullySelected(group.tags)"
+              [class.is-partial]="isCategoryPartiallySelected(group.tags)"
+              (click)="toggleCategory(group.tags)"
+            >
+              <span class="all-projects__filter-menu-check"></span>
+              {{ categoryLabel(group.category) }}
+            </button>
+            <button
+              class="all-projects__filter-menu-item"
+              *ngFor="let tag of group.tags"
+              [class.is-active]="isTagActive(tag)"
+              (click)="toggleTag(tag)"
+            >
+              <span class="all-projects__filter-menu-check"></span>
+              {{ tag }}
+            </button>
+          </div>
+          <p class="all-projects__filter-menu-empty" *ngIf="menuGroups.length === 0">{{ t.noMatchingTags }}</p>
+        </div>
+
+        <div class="all-projects__filter-menu-footer">
+          <button class="all-projects__filter-menu-clear" (click)="clearFilters()">{{ t.clearAll }}</button>
+          <button class="all-projects__filter-menu-done" (click)="closeFilterMenu()">{{ t.done }}</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="all-projects__count">{{ t.projectCount(totalCount) }}</p>
+
+    <div class="all-projects__grid">
+      <article
+        class="all-projects__card"
+        #cardEl
+        *ngFor="let project of visibleProjects"
+      >
+        <div
+          class="all-projects__image"
+          [style.background-image]="project.image ? 'url(' + project.image + ')' : null"
+        >
+          <div class="all-projects__image-fade"></div>
+
+          <button
+            class="all-projects__like"
+            [class.is-liked]="isLiked(project)"
+            (click)="toggleLike(project, $event)"
+            [attr.aria-label]="t.likeThisProject"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" [attr.fill]="isLiked(project) ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <span *ngIf="likeCount(project) > 0">{{ likeCount(project) }}</span>
+          </button>
+
+          <div class="all-projects__image-content">
+            <h3 class="all-projects__title">{{ project.title }}</h3>
+            <p class="all-projects__description">{{ language.lang() === 'en' ? project.description : project.descriptionFr }}</p>
+
+            <div class="all-projects__tags">
+              <span class="all-projects__tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-projects__actions">
+          <a
+            *ngIf="project.githubUrl"
+            class="all-projects__cta"
+            [class.all-projects__cta--half]="project.liveUrl"
+            [href]="project.githubUrl"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            {{ t.sourceCode }}
+          </a>
+          <a
+            *ngIf="project.liveUrl"
+            class="all-projects__cta"
+            [class.all-projects__cta--half]="project.githubUrl"
+            [href]="project.liveUrl"
+            target="_blank"
+            rel="noopener"
+          >
+            {{ t.liveDemo }}
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <div class="all-projects__load-more" *ngIf="hasMore">
+      <button class="all-projects__load-more-btn" (click)="loadMore()">{{ t.loadMore }}</button>
+    </div>
+  </div>
+</section>

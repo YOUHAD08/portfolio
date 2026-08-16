@@ -1,0 +1,30 @@
+<section class="skills-sphere" id="skills">
+  <div class="skills-sphere__inner">
+    <div class="skills-sphere__content">
+      <h2 class="skills-sphere__heading">{{ t.heading }}</h2>
+
+      <p class="skills-sphere__text">{{ t.intro }}</p>
+
+      <div class="skills-sphere__highlights">
+        <span class="skills-sphere__highlight" *ngFor="let h of t.highlights">{{ h }}</span>
+      </div>
+    </div>
+
+    <div
+      class="skills-sphere__stage"
+      (mousemove)="onMouseMove($event)"
+      (mouseleave)="onMouseLeave()"
+    >
+      <div class="skills-sphere__sphere" #sphereEl>
+        <div class="skills-sphere__tag" *ngFor="let skill of skills" #tagEl [title]="skill">
+          <ng-container *ngIf="icon(skill) as def">
+            <img *ngIf="def.img" [src]="def.img" [alt]="skill" />
+            <svg *ngIf="!def.img" [attr.viewBox]="def.viewBox" xmlns="http://www.w3.org/2000/svg">
+              <path *ngFor="let p of def.paths" [attr.d]="p.d" [attr.fill]="p.fill"></path>
+            </svg>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

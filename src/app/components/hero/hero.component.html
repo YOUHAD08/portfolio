@@ -1,0 +1,55 @@
+<section class="hero" id="hero">
+  <div class="hero__content">
+    <div class="hero__badge">
+      <span class="hero__badge-dot"></span>
+      {{ t.badge }}
+    </div>
+
+    <h1 class="hero__title">{{ t.titlePrefix }}<span class="hero__aws">{{ t.titleAws }}</span>{{ t.titleSuffix }}</h1>
+
+    <p class="hero__bio">
+      {{ t.bioPrefix }}<span class="hero__aws">{{ t.bioAws }}</span>{{ t.bioSuffix }}
+    </p>
+
+    <div class="hero__actions">
+      <a href="#projects" class="hero__btn hero__btn--outline">{{ t.seeWorks }}</a>
+      <a href="Ayoub-Youhad-CV.pdf" download class="hero__btn hero__btn--outline">
+        {{ t.downloadCv }}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v12"></path>
+          <path d="M7 10l5 5 5-5"></path>
+          <path d="M5 21h14"></path>
+        </svg>
+      </a>
+      <a href="#contact" class="hero__btn hero__btn--filled">
+        {{ t.contactMe }}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"></path>
+          <path d="M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="hero__stats" #statsEl>
+      <div class="hero__stat" *ngFor="let s of stats">
+        <span class="hero__stat-value">{{ s.display }}{{ s.suffix }}</span>
+        <span class="hero__stat-label">{{ statLabel(s) }}</span>
+      </div>
+    </div>
+
+    <div class="hero__stack">
+      <div class="hero__stack-track">
+        <div class="hero__stack-icon" *ngFor="let tech of techStackLoop" [title]="tech.name">
+          <img *ngIf="tech.img" [src]="tech.img" [alt]="tech.name" />
+          <svg *ngIf="!tech.img" [attr.viewBox]="tech.viewBox" xmlns="http://www.w3.org/2000/svg">
+            <path *ngFor="let p of tech.paths" [attr.d]="p.d" [attr.fill]="p.fill"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__image">
+    <img src="images/ayoub-photo.png" alt="Ayoub Youhad" />
+  </div>
+</section>

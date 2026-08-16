@@ -1,0 +1,42 @@
+<section class="experience" id="experience">
+  <div class="experience__inner">
+    <div class="experience__header">
+      <span class="experience__pill">{{ t.pill }}</span>
+      <h2 class="experience__heading">{{ t.heading }}</h2>
+      <p class="experience__tagline">{{ t.tagline }}</p>
+    </div>
+
+    <div class="experience__list">
+      <div
+        class="experience__item"
+        [class.experience__item--left]="i % 2 === 0"
+        [class.experience__item--right]="i % 2 !== 0"
+        *ngFor="let m of milestones; let i = index"
+      >
+        <span class="experience__dot"></span>
+
+        <div class="experience__col" #itemEl>
+          <div class="experience__date">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+            {{ milestoneDate(m) }}
+            <span class="experience__current" *ngIf="m.current">{{ t.current }}</span>
+          </div>
+
+          <div class="experience__card">
+            <h3 class="experience__title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              {{ milestoneTitle(m) }}
+            </h3>
+
+            <p class="experience__company">
+              <img class="experience__logo" [src]="m.logo" [alt]="m.company" />
+              {{ m.company }}
+            </p>
+
+            <p class="experience__description">{{ milestoneDescription(m) }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
