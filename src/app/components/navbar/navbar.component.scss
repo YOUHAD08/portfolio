@@ -208,6 +208,11 @@
     background: transparent;
     border-bottom-color: transparent;
 
+    &.navbar--menu-open {
+      background: rgba(10, 10, 10, 0.96);
+      border-bottom-color: rgba(255, 255, 255, 0.12);
+    }
+
     &__brand {
       display: none;
     }
@@ -222,6 +227,7 @@
 
     &__link {
       color: #fff;
+      font-size: 17px;
     }
 
     &__lang-toggle {
@@ -259,9 +265,11 @@
       top: 100%;
       left: 0;
       right: 0;
+      height: 65vh;
       z-index: 100;
       flex-direction: column;
       align-items: stretch;
+      justify-content: center;
       gap: 18px;
       padding: 20px;
       background: var(--bg);
