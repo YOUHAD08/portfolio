@@ -45,6 +45,12 @@ body {
   transition: background 0.25s ease, color 0.25s ease;
 }
 
+@media (max-width: 430px) {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
