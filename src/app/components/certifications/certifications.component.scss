@@ -322,3 +322,48 @@
     }
   }
 }
+
+@media (max-width: 430px) {
+  .certifications {
+    &__inner {
+      padding: 60px 20px;
+    }
+
+    &__heading {
+      font-size: 34px;
+    }
+
+    &__tagline {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    &__tabs {
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    &__tab {
+      font-size: 12.5px;
+      padding: 8px 14px;
+      gap: 6px;
+    }
+
+    &__card {
+      flex: 0 0 260px;
+    }
+
+    &__title {
+      font-size: 15px;
+    }
+
+    &__meta {
+      font-size: 11.5px;
+    }
+
+    &__cta {
+      font-size: 12px;
+      padding: 10px 12px;
+    }
+  }
+}
