@@ -304,3 +304,14 @@
     }
   }
 }
+
+@media (min-width: 431px) and (max-width: 900px) {
+  .experience {
+    &__item--left,
+    &__item--right {
+      .experience__col {
+        max-width: calc(100% - 44px);
+      }
+    }
+  }
+}
