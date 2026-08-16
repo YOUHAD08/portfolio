@@ -120,3 +120,37 @@
     }
   }
 }
+
+@media (max-width: 430px) {
+  .skills-sphere {
+    &__inner {
+      padding: 60px 20px;
+    }
+
+    &__content {
+      text-align: center;
+    }
+
+    &__heading {
+      font-size: 34px;
+    }
+
+    &__text {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    &__highlights {
+      justify-content: center;
+    }
+
+    &__stage {
+      flex: 0 0 320px;
+      height: 320px;
+    }
+
+    &__sphere {
+      transform: scale(0.75);
+    }
+  }
+}
