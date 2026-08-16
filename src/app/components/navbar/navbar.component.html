@@ -1,7 +1,7 @@
 <header class="navbar" [class.navbar--menu-open]="mobileMenuOpen">
   <a class="navbar__brand" routerLink="/">
     <div class="navbar__avatar">
-      <img src="images/ayoub-photo.png" alt="Ayoub Youhad" />
+      <img [src]="theme.theme() === 'light' ? 'images/ayoub-photo-light.png' : 'images/ayoub-photo-dark.png'" alt="Ayoub Youhad" />
     </div>
     <span class="navbar__name">Ayoub Youhad</span>
   </a>

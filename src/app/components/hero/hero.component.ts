@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
+import { ThemeService } from '../../services/theme.service';
 
 interface TechIcon {
   name: string;
@@ -63,7 +64,7 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   @ViewChild('statsEl') statsEl?: ElementRef<HTMLElement>;
   private statsObserver?: IntersectionObserver;
 
-  constructor(public language: LanguageService) {}
+  constructor(public language: LanguageService, public theme: ThemeService) {}
 
   get t() {
     return TEXT[this.language.lang()];

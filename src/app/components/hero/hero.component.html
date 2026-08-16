@@ -50,6 +50,6 @@
   </div>
 
   <div class="hero__image">
-    <img src="images/ayoub-photo.png" alt="Ayoub Youhad" />
+    <img [src]="theme.theme() === 'light' ? 'images/ayoub-photo-light.png' : 'images/ayoub-photo-dark.png'" alt="Ayoub Youhad" />
   </div>
 </section>
