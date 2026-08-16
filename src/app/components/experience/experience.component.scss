@@ -307,11 +307,61 @@
 
 @media (min-width: 431px) and (max-width: 900px) {
   .experience {
+    overflow-x: hidden;
+
+    &__list::before {
+      left: 50%;
+      z-index: 0;
+    }
+
+    &__dot {
+      left: 50%;
+      z-index: 0;
+    }
+
     &__item--left,
     &__item--right {
       .experience__col {
-        max-width: calc(100% - 44px);
+        grid-column: 1;
+        justify-self: center;
+        margin-left: 0;
+        max-width: 520px;
+        align-items: center;
       }
+    }
+
+    &__item:nth-child(odd) {
+      --slide-x: 50px;
+      --slide-y: 50px;
+    }
+
+    &__item:nth-child(even) {
+      --slide-x: -50px;
+      --slide-y: 50px;
+    }
+
+    &__col {
+      align-items: center;
+      text-align: center;
+      transition: opacity 0.75s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.75s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    &__card {
+      position: relative;
+      z-index: 1;
+      padding: 24px 28px;
+    }
+
+    &__date {
+      justify-content: center;
+    }
+
+    &__title {
+      justify-content: center;
+    }
+
+    &__company {
+      justify-content: center;
     }
   }
 }
