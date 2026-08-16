@@ -154,3 +154,50 @@
     }
   }
 }
+
+@media (min-width: 431px) and (max-width: 900px) {
+  .skills-sphere {
+    &__inner {
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      padding: 60px 24px;
+    }
+
+    &__content {
+      flex: 0 0 240px;
+      max-width: 240px;
+      text-align: left;
+    }
+
+    &__heading {
+      font-size: 34px;
+      margin-bottom: 14px;
+    }
+
+    &__text {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    &__highlights {
+      gap: 8px;
+    }
+
+    &__highlight {
+      font-size: 13px;
+      padding: 8px 14px;
+    }
+
+    &__stage {
+      flex: 1;
+      min-width: 0;
+      height: 380px;
+    }
+
+    &__sphere {
+      transform: scale(0.75);
+    }
+  }
+}
