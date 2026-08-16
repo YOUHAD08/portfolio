@@ -207,6 +207,7 @@
     justify-content: flex-end;
     background: transparent;
     border-bottom-color: transparent;
+    pointer-events: none;
 
     &.navbar--menu-open {
       background: rgba(10, 10, 10, 0.96);
@@ -219,6 +220,7 @@
 
     &__hamburger {
       display: flex;
+      pointer-events: auto;
     }
 
     &__hamburger span {
@@ -275,6 +277,7 @@
       background: var(--bg);
       border-bottom: 1px solid var(--border-subtle);
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      pointer-events: auto;
 
       &.is-open {
         display: flex;
