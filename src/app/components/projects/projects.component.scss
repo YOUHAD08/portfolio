@@ -283,3 +283,29 @@
     }
   }
 }
+
+@media (min-width: 431px) and (max-width: 900px) {
+  .projects {
+    &__card {
+      flex: 0 0 300px;
+    }
+
+    &__title {
+      font-size: 19px;
+    }
+
+    &__description {
+      font-size: 12.5px;
+    }
+
+    &__tag {
+      font-size: 11px;
+      padding: 5px 11px;
+    }
+
+    &__link {
+      font-size: 12px;
+      padding: 8px 13px;
+    }
+  }
+}
