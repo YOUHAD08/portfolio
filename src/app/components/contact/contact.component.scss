@@ -117,3 +117,26 @@
     }
   }
 }
+
+@media (min-width: 431px) and (max-width: 900px) {
+  .contact {
+    &__inner {
+      padding: 70px 24px;
+    }
+
+    &__email-btn {
+      font-size: 14px;
+      padding: 13px 25px;
+      margin-bottom: 28px;
+    }
+
+    &__socials {
+      gap: 12px;
+    }
+
+    &__social {
+      width: 43px;
+      height: 43px;
+    }
+  }
+}
