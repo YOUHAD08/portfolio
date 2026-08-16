@@ -553,3 +553,52 @@
     }
   }
 }
+
+@media (min-width: 431px) and (max-width: 900px) {
+  .all-projects {
+    &__back {
+      font-size: 13.5px;
+    }
+
+    &__header h1 {
+      font-size: 38px;
+    }
+
+    &__filter-trigger {
+      font-size: 13.5px;
+      padding: 10px 16px;
+    }
+
+    &__filter-menu {
+      width: calc(100vw - 48px);
+      max-width: 340px;
+    }
+
+    &__count {
+      font-size: 12.5px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__description {
+      font-size: 12px;
+    }
+
+    &__tag {
+      font-size: 10.5px;
+      padding: 4px 10px;
+    }
+
+    &__cta {
+      font-size: 12.5px;
+      padding: 11px 13px;
+    }
+
+    &__load-more-btn {
+      font-size: 13.5px;
+      padding: 11px 23px;
+    }
+  }
+}
