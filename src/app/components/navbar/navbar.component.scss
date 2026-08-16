@@ -204,15 +204,12 @@
     z-index: 30;
     padding: 16px 20px;
     flex-wrap: nowrap;
+    justify-content: flex-end;
     background: transparent;
     border-bottom-color: transparent;
 
-    &__name {
-      color: #fff;
-    }
-
-    &__avatar {
-      border-color: rgba(255, 255, 255, 0.4);
+    &__brand {
+      display: none;
     }
 
     &__hamburger {

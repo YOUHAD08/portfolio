@@ -266,6 +266,11 @@
     }
 
     &__badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 25;
+      margin-bottom: 0;
       background: rgba(255, 255, 255, 0.12);
       border-color: rgba(255, 255, 255, 0.3);
       color: #fff;
@@ -285,17 +290,28 @@
       justify-content: center;
     }
 
+    &__stat:nth-child(2) {
+      order: 3;
+    }
+
+    &__stat:nth-child(3) {
+      order: 2;
+    }
+
     &__stat-label {
       color: rgba(255, 255, 255, 0.75);
     }
 
     &__actions {
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     &__btn {
-      padding: 11px 18px;
-      font-size: 13px;
+      padding: 10px 16px;
+      font-size: 12.5px;
+      white-space: nowrap;
     }
 
     &__btn--outline {
