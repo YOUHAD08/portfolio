@@ -42,7 +42,7 @@ PROJECTS[0] = {
 };
 
 PROJECTS[1] = {
-  title: 'Cipboard Landing Page Master',
+  title: 'Clipboard Landing Page Master',
   description: 'A responsive landing page (Frontend Mentor challenge) built with HTML5 and CSS Grid & Flexbox, adapting seamlessly across mobile, tablet, and desktop.',
   descriptionFr: "Une landing page responsive (défi Frontend Mentor) construite avec HTML5 et CSS Grid & Flexbox, s'adaptant parfaitement au mobile, à la tablette et au bureau.",
   tags: ['HTML', 'CSS3'],
