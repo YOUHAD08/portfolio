@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-  apiKey: 'PASTE_API_KEY_HERE',
-  authDomain: 'PASTE_AUTH_DOMAIN_HERE',
-  projectId: 'PASTE_PROJECT_ID_HERE',
-  storageBucket: 'PASTE_STORAGE_BUCKET_HERE',
-  messagingSenderId: 'PASTE_MESSAGING_SENDER_ID_HERE',
-  appId: 'PASTE_APP_ID_HERE'
+  apiKey: 'AIzaSyByjH3sHkDOUOTVcYc3wax-yJNNSfD8b4',
+  authDomain: 'ayoub-portfolio-c2907.firebaseapp.com',
+  projectId: 'ayoub-portfolio-c2907',
+  storageBucket: 'ayoub-portfolio-c2907.firebasestorage.app',
+  messagingSenderId: '298788322545',
+  appId: '1:298788322545:web:5b09287991a38328e43d50'
 };
