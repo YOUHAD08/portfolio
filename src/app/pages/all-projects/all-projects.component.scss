@@ -612,3 +612,49 @@
     }
   }
 }
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .all-projects {
+    padding: 60px 60px 90px;
+
+    &__header h1 {
+      font-size: 40px;
+    }
+
+    &__filter-trigger {
+      font-size: 13.5px;
+      padding: 10px 17px;
+    }
+
+    &__count {
+      font-size: 12.5px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__title {
+      font-size: 16.5px;
+    }
+
+    &__description {
+      font-size: 12.5px;
+    }
+
+    &__tag {
+      font-size: 10.5px;
+      padding: 4px 10px;
+    }
+
+    &__cta {
+      font-size: 13px;
+      padding: 12px 14px;
+    }
+
+    &__load-more-btn {
+      font-size: 13.5px;
+      padding: 12px 24px;
+    }
+  }
+}
