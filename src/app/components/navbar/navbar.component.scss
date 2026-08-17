@@ -406,3 +406,9 @@
     }
   }
 }
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .navbar {
+    padding: 20px 60px;
+  }
+}
