@@ -201,3 +201,33 @@
     }
   }
 }
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .skills-sphere {
+    &__inner {
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+      padding: 90px 60px;
+    }
+
+    &__content {
+      flex: 0 0 300px;
+      max-width: 300px;
+    }
+
+    &__heading {
+      font-size: 38px;
+    }
+
+    &__stage {
+      flex: 1;
+      width: auto;
+      height: 460px;
+    }
+
+    &__sphere {
+      transform: scale(0.85);
+    }
+  }
+}
