@@ -365,3 +365,27 @@
     }
   }
 }
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .experience {
+    &__inner {
+      padding: 90px 60px;
+    }
+
+    &__item--left {
+      .experience__col {
+        margin-right: 30px;
+      }
+    }
+
+    &__item--right {
+      .experience__col {
+        margin-left: 30px;
+      }
+    }
+
+    &__card {
+      padding: 22px 26px;
+    }
+  }
+}
