@@ -436,3 +436,29 @@
     }
   }
 }
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .hero {
+    padding: 90px 60px;
+
+    &__actions {
+      gap: 10px;
+    }
+
+    &__btn {
+      font-size: 12.5px;
+      padding: 10px 16px;
+      white-space: nowrap;
+    }
+
+    &__stat {
+      align-items: center;
+    }
+
+    &__image {
+      align-self: flex-start;
+      margin-top: 66px;
+      aspect-ratio: 465 / 430;
+    }
+  }
+}
