@@ -178,12 +178,13 @@
 
   &__badge-img {
     position: absolute;
-    top: 44%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 82%;
-    max-height: 82%;
+    max-width: 92%;
+    max-height: 92%;
     object-fit: contain;
+    border-radius: 14px;
     z-index: 1;
   }
 

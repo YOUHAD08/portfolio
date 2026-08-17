@@ -56,22 +56,26 @@ const CATEGORIES: Category[] = [
         title: 'Advanced Master, Engineering, Computer Science, Big Data, and Cloud Computing',
         issuer: 'ENSET Mohammedia',
         date: 'Oct 2024 – Oct 2026',
-        inProgress: true
+        inProgress: true,
+        image: 'images/education/enset-mohammedia-logo.png'
       },
       {
         title: 'Engineering Degree, Engineering/Industrial Management',
         issuer: 'Mohammed VI International Academy of Civil Aviation',
-        date: 'Sep 2019 – Sep 2022'
+        date: 'Sep 2019 – Sep 2022',
+        image: 'images/education/mohammed-vi-academy-logo.png'
       },
       {
         title: 'Preparatory Classes for Grandes Écoles, MPSI/MP (Mathematics, Physics, and Engineering Sciences)',
         issuer: 'CPGE Ibn Timiya',
-        date: 'Sep 2017 – Sep 2019'
+        date: 'Sep 2017 – Sep 2019',
+        image: 'images/education/cpge-ibn-timiya-logo.png'
       },
       {
         title: 'Baccalaureate, Mathematics',
         issuer: 'Toubkal High School',
-        date: 'Sep 2016 – Sep 2017'
+        date: 'Sep 2016 – Sep 2017',
+        image: 'images/education/toubkal-high-school-logo.png'
       }
     ]
   },
