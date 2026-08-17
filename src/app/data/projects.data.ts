@@ -65,8 +65,8 @@ PROJECTS[2] = {
 
 PROJECTS[3] = {
   title: 'Intro-component-with-sign-up-form',
-  description: 'A responsive landing page with a sign-up form, built using HTML5, CSS3, and custom properties. Clean UI, mobile-first across 📱 mobile, 📟 tablet, and 💻 desktop.',
-  descriptionFr: "Une landing page responsive avec un formulaire d'inscription, construite avec HTML5, CSS3 et les propriétés personnalisées. Interface épurée, mobile-first sur 📱 mobile, 📟 tablette et 💻 bureau.",
+  description: 'A responsive landing page with a sign-up form, built using HTML5, CSS3, and custom properties. Clean UI, mobile-first across mobile, tablet, and desktop.',
+  descriptionFr: "Une landing page responsive avec un formulaire d'inscription, construite avec HTML5, CSS3 et les propriétés personnalisées. Interface épurée, mobile-first sur mobile, tablette et bureau.",
   tags: ['HTML', 'CSS3'],
   image: 'images/projects/intro-signup-form.jpg',
   githubUrl: 'https://github.com/YOUHAD08/Intro-component-with-sign-up-form.git',
