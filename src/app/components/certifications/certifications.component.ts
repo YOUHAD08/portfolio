@@ -63,19 +63,22 @@ const CATEGORIES: Category[] = [
         title: 'Engineering Degree, Engineering/Industrial Management',
         issuer: 'Mohammed VI International Academy of Civil Aviation',
         date: 'Sep 2019 – Sep 2022',
-        image: 'images/education/mohammed-vi-academy-logo.png'
+        image: 'images/education/diplomas/mohammed-vi-academy-diploma.png',
+        credentialUrl: 'images/education/diplomas/mohammed-vi-academy-diploma.png'
       },
       {
         title: 'Preparatory Classes for Grandes Écoles, MPSI/MP (Mathematics, Physics, and Engineering Sciences)',
         issuer: 'CPGE Ibn Timiya',
         date: 'Sep 2017 – Sep 2019',
-        image: 'images/education/cpge-ibn-timiya-logo.png'
+        image: 'images/education/diplomas/cpge-ibn-timiya-diploma.png',
+        credentialUrl: 'images/education/diplomas/cpge-ibn-timiya-diploma.png'
       },
       {
         title: 'Baccalaureate, Mathematics',
         issuer: 'Toubkal High School',
         date: 'Sep 2016 – Sep 2017',
-        image: 'images/education/toubkal-high-school-logo.png'
+        image: 'images/education/diplomas/toubkal-high-school-diploma.png',
+        credentialUrl: 'images/education/diplomas/toubkal-high-school-diploma.png'
       }
     ]
   },
