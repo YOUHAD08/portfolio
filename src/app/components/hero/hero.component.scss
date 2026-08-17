@@ -462,3 +462,11 @@
     }
   }
 }
+
+@media (min-width: 1025px) {
+  .hero {
+    &__stat {
+      align-items: center;
+    }
+  }
+}
