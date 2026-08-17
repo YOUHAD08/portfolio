@@ -42,7 +42,7 @@ PROJECTS[0] = {
 };
 
 PROJECTS[1] = {
-  title: 'Cipboard-Landing-Page-Master',
+  title: 'Cipboard Landing Page Master',
   description: 'A responsive landing page (Frontend Mentor challenge) built with HTML5 and CSS Grid & Flexbox, adapting seamlessly across mobile, tablet, and desktop.',
   descriptionFr: "Une landing page responsive (défi Frontend Mentor) construite avec HTML5 et CSS Grid & Flexbox, s'adaptant parfaitement au mobile, à la tablette et au bureau.",
   tags: ['HTML', 'CSS3'],
@@ -53,7 +53,7 @@ PROJECTS[1] = {
 };
 
 PROJECTS[2] = {
-  title: 'Four-Card-Feature-Section',
+  title: 'Four Card Feature Section',
   description: 'A responsive card layout built with semantic HTML5, CSS Grid, and Flexbox — mobile-first and optimized for all devices.',
   descriptionFr: "Une mise en page de cartes responsive construite avec HTML5 sémantique, CSS Grid et Flexbox — mobile-first et optimisée pour tous les appareils.",
   tags: ['HTML', 'CSS3'],
@@ -64,7 +64,7 @@ PROJECTS[2] = {
 };
 
 PROJECTS[3] = {
-  title: 'Intro-component-with-sign-up-form',
+  title: 'Intro Component With Sign Up Form',
   description: 'A responsive landing page with a sign-up form, built using HTML5, CSS3, and custom properties. Clean UI, mobile-first across mobile, tablet, and desktop.',
   descriptionFr: "Une landing page responsive avec un formulaire d'inscription, construite avec HTML5, CSS3 et les propriétés personnalisées. Interface épurée, mobile-first sur mobile, tablette et bureau.",
   tags: ['HTML', 'CSS3'],
@@ -75,7 +75,7 @@ PROJECTS[3] = {
 };
 
 PROJECTS[4] = {
-  title: 'Single-Price-Grid-Component',
+  title: 'Single Price Grid Component',
   description: 'A responsive pricing section built with HTML & CSS, demonstrating mobile-first design, CSS Grid, and hover interactions.',
   descriptionFr: "Une section de tarification responsive construite avec HTML & CSS, illustrant le design mobile-first, CSS Grid et les interactions au survol.",
   tags: ['HTML', 'CSS3'],
@@ -86,7 +86,7 @@ PROJECTS[4] = {
 };
 
 PROJECTS[5] = {
-  title: '3-column-preview-card-component',
+  title: '3 Column Preview Card Component',
   description: 'A responsive card layout built for the Frontend Mentor Challenge using HTML5, CSS Grid, and responsive design principles.',
   descriptionFr: "Une mise en page de cartes responsive construite pour le défi Frontend Mentor avec HTML5, CSS Grid et les principes de design responsive.",
   tags: ['HTML', 'CSS3'],
@@ -97,7 +97,7 @@ PROJECTS[5] = {
 };
 
 PROJECTS[6] = {
-  title: 'Order-summary-card-solution',
+  title: 'Order Summary Card Solution',
   description: 'A responsive card component built with HTML & CSS, using Flexbox and media queries. Includes mobile & desktop layouts.',
   descriptionFr: "Un composant de carte responsive construit avec HTML & CSS, utilisant Flexbox et les media queries. Inclut des mises en page mobile et bureau.",
   tags: ['HTML', 'CSS3'],
@@ -108,7 +108,7 @@ PROJECTS[6] = {
 };
 
 PROJECTS[7] = {
-  title: 'Testimonials-Grid-Section',
+  title: 'Testimonials Grid Section',
   description: 'A responsive solution to the Frontend Mentor challenge, built with modern HTML and CSS for a clean, accessible design across screen sizes.',
   descriptionFr: "Une solution responsive au défi Frontend Mentor, construite avec du HTML et CSS modernes pour un design propre et accessible sur toutes les tailles d'écran.",
   tags: ['HTML', 'CSS3'],
@@ -119,7 +119,7 @@ PROJECTS[7] = {
 };
 
 PROJECTS[8] = {
-  title: 'MARRAKECH-JUICE---Landing-Page',
+  title: 'Marrakech Juice Landing Page',
   description: 'A vibrant, responsive landing page built with modern HTML and CSS, featuring smooth animations, sleek design, and social media integration.',
   descriptionFr: "Une landing page vibrante et responsive construite avec du HTML et CSS modernes, avec animations fluides, design élégant et intégration des réseaux sociaux.",
   tags: ['HTML', 'CSS3'],
@@ -130,7 +130,7 @@ PROJECTS[8] = {
 };
 
 PROJECTS[9] = {
-  title: 'Rock-Paper-Scissors',
+  title: 'Rock Paper Scissors',
   description: 'An interactive browser game built with HTML5, CSS3, and vanilla JavaScript, featuring game logic, score tracking, and a responsive UI.',
   descriptionFr: "Un jeu de navigateur interactif construit avec HTML5, CSS3 et JavaScript pur, avec logique de jeu, suivi du score et une interface responsive.",
   tags: ['HTML', 'CSS3', 'JavaScript'],
@@ -152,7 +152,7 @@ PROJECTS[10] = {
 };
 
 PROJECTS[11] = {
-  title: 'Distributed Microservices E-Commerce Blueprint',
+  title: 'Distributed Microservices E Commerce Blueprint',
   description: 'A Spring Boot microservices reference project demonstrating service discovery, API gateway routing, centralized config management, Feign-based communication, and Resilience4j circuit breakers across six services, each backed by its own H2 database.',
   descriptionFr: "Un projet de référence en microservices Spring Boot illustrant la découverte de services, le routage via API gateway, la gestion centralisée de la configuration, la communication via Feign, et les circuit breakers Resilience4j sur six services, chacun avec sa propre base H2.",
   tags: ['Java', 'Git', 'GitHub', 'Spring Boot', 'Spring Cloud', 'Microservices Architecture', 'REST API'],
@@ -172,7 +172,7 @@ PROJECTS[12] = {
 };
 
 PROJECTS[13] = {
-  title: 'End-to-End Nginx CI/CD Pipeline (Jenkins + Docker Hub)',
+  title: 'End to End Nginx CI/CD Pipeline (Jenkins + Docker Hub)',
   description: 'A fully automated CI/CD pipeline that builds, tests, publishes, and deploys a containerized nginx web application — triggered automatically on every GitHub push.',
   descriptionFr: "Un pipeline CI/CD entièrement automatisé qui construit, teste, publie et déploie une application web nginx conteneurisée — déclenché automatiquement à chaque push GitHub.",
   tags: ['Jenkins', 'Docker', 'CI-CD', 'Nginx', 'HTML'],
@@ -182,7 +182,7 @@ PROJECTS[13] = {
 };
 
 PROJECTS[14] = {
-  title: 'Full-Stack AI Agent with Vector Search & Custom Tools',
+  title: 'Full Stack AI Agent with Vector Search & Custom Tools',
   description: 'Full-stack AI application using Spring Boot, Spring AI, and Angular. Features Retrieval-Augmented Generation (RAG) for querying uploaded PDFs and custom tools for fetching live system data.',
   descriptionFr: "Application IA full-stack utilisant Spring Boot, Spring AI et Angular. Intègre la génération augmentée par récupération (RAG) pour interroger des PDF téléversés et des outils personnalisés pour récupérer des données système en direct.",
   tags: ['Spring Boot', 'Spring AI', 'Angular', 'AI Agent', 'RAG', 'Semantic-Search', 'Vector Store', 'Java', 'TypeScript', 'LLM', 'HTML', 'CSS'],
@@ -292,7 +292,7 @@ PROJECTS[24] = {
 };
 
 PROJECTS[25] = {
-  title: 'Scikit-Image Histogram Specification in OpenCV',
+  title: 'Scikit Image Histogram Specification in OpenCV',
   description: 'Implementation of image histogram matching using skimage.exposure.match_histograms and OpenCV.',
   descriptionFr: "Implémentation de la correspondance d'histogrammes d'images utilisant skimage.exposure.match_histograms et OpenCV.",
   tags: ['OpenCV', 'scikit-image', 'Histogram Specification', 'Image Processing', 'Python'],
@@ -302,7 +302,7 @@ PROJECTS[25] = {
 };
 
 PROJECTS[26] = {
-  title: 'KNN Classification and Cross-Validation on CIFAR-10',
+  title: 'KNN Classification and Cross Validation on CIFAR 10',
   description: 'Evaluating K-Nearest Neighbors image classification performance across multiple K values using cross-validation on CIFAR-10 image vectors.',
   descriptionFr: "Évaluation de la performance de classification d'images K-Nearest Neighbors sur plusieurs valeurs de K en utilisant la validation croisée sur les vecteurs d'images CIFAR-10.",
   tags: ['KNN', 'CIFAR-10', 'Cross-Validation', 'scikit-learn', 'Python', 'Image Classification'],
