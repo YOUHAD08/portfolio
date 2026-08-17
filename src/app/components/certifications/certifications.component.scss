@@ -399,3 +399,33 @@
     }
   }
 }
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .certifications {
+    &__inner {
+      padding: 90px 60px;
+    }
+
+    &__track {
+      margin: 0 -60px;
+      padding: 4px 60px 8px;
+    }
+
+    &__card {
+      flex: 0 0 305px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__meta {
+      font-size: 12.5px;
+    }
+
+    &__cta {
+      font-size: 13px;
+      padding: 12px 14px;
+    }
+  }
+}
