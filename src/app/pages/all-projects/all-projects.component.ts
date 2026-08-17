@@ -112,6 +112,7 @@ export class AllProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private likesMap: Record<string, number> = {};
   private likedSet = new Set<string>();
+  private likeCooldownSet = new Set<string>();
   private likeUnsubscribers: Unsubscribe[] = [];
 
   @ViewChildren('cardEl') cardEls!: QueryList<ElementRef<HTMLElement>>;
@@ -149,9 +150,17 @@ export class AllProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.likedSet.has(project.title);
   }
 
+  isLikeCoolingDown(project: Project): boolean {
+    return this.likeCooldownSet.has(project.title);
+  }
+
   async toggleLike(project: Project, event: Event): Promise<void> {
     event.stopPropagation();
     event.preventDefault();
+    if (this.likeCooldownSet.has(project.title)) return;
+    this.likeCooldownSet.add(project.title);
+    setTimeout(() => this.likeCooldownSet.delete(project.title), 800);
+
     if (this.likedSet.has(project.title)) this.likedSet.delete(project.title);
     else this.likedSet.add(project.title);
     await this.likes.toggleLike(project.title);

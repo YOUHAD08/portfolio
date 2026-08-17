@@ -71,6 +71,7 @@
           <button
             class="all-projects__like"
             [class.is-liked]="isLiked(project)"
+            [disabled]="isLikeCoolingDown(project)"
             (click)="toggleLike(project, $event)"
             [attr.aria-label]="t.likeThisProject"
           >
