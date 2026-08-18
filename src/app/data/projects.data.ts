@@ -492,3 +492,223 @@ PROJECTS[44] = {
   githubUrl: 'https://github.com/YOUHAD08/e-bank-frontend-angular.git',
   featured: true
 };
+
+PROJECTS[45] = {
+  title: 'Product Management System',
+  description: 'A full-stack product management web application featuring a Spring Boot REST API, an Angular 17 client UI, and an in-memory H2 database for real-time CRUD operations.',
+  descriptionFr: "Une application web de gestion de produits full-stack avec une API REST Spring Boot, une interface client Angular 17, et une base de données H2 en mémoire pour des opérations CRUD en temps réel.",
+  tags: ['Spring Boot', 'Angular', 'H2 Database', 'REST API', 'Java', 'TypeScript'],
+  image: 'images/projects/home-page.png',
+  githubUrl: 'https://github.com/YOUHAD08/product-management-system.git',
+  featured: false
+};
+
+PROJECTS[46] = {
+  title: 'Product Spring MVC Web App',
+  description: 'A secure product management web application built with Spring Boot MVC, Spring Security, and Thymeleaf. It provides role-based access control, server-side rendering, and database persistence via Spring Data JPA.',
+  descriptionFr: "Une application web de gestion de produits sécurisée construite avec Spring Boot MVC, Spring Security et Thymeleaf. Elle offre un contrôle d'accès basé sur les rôles, un rendu côté serveur, et la persistance des données via Spring Data JPA.",
+  tags: ['Spring Boot', 'Spring MVC', 'Spring Security', 'Thymeleaf', 'Spring Data JPA', 'Java', 'H2 Database'],
+  image: 'images/projects/products.png',
+  githubUrl: 'https://github.com/YOUHAD08/product-springboot-mvc-app.git',
+  featured: false
+};
+
+PROJECTS[47] = {
+  title: 'Number Guessing Android App',
+  description: 'A localized Java Android app where users guess a secret number with real-time feedback, attempt counters, score tracking, and a dark-mode interface.',
+  descriptionFr: "Une application Android Java localisée où les utilisateurs devinent un nombre secret avec des retours en temps réel, un compteur de tentatives, un suivi du score, et une interface en mode sombre.",
+  tags: ['Android', 'Java', 'Android Studio'],
+  image: 'images/projects/App.png',
+  githubUrl: 'https://github.com/YOUHAD08/Number-Guessing-Game---Android-App.git',
+  featured: false
+};
+
+PROJECTS[48] = {
+  title: 'Kafka Streams Weather Data Processor',
+  description: 'A real-time Kafka Streams application that filters, transforms, and computes station-wise average temperature and humidity metrics from weather streams deployed via Docker.',
+  descriptionFr: "Une application Kafka Streams en temps réel qui filtre, transforme et calcule les métriques moyennes de température et d'humidité par station à partir de flux météo déployés via Docker.",
+  tags: ['Apache Kafka', 'Kafka Streams', 'Java', 'Docker', 'Real-Time Analytics', 'Data Pipelines'],
+  image: 'images/projects/Weather%20Data%20Processor.png',
+  githubUrl: 'https://github.com/YOUHAD08/Kafka-Streams-Weather-Data-Processor.git',
+  featured: false
+};
+
+PROJECTS[49] = {
+  title: 'Spark Incident Analyzer',
+  description: 'An Apache Spark SQL application in Java that parses industrial service incident logs from CSV, aggregates incident counts by service, and extracts top incident-heavy years using Spark DataFrame transformations.',
+  descriptionFr: "Une application Apache Spark SQL en Java qui analyse des journaux d'incidents de service industriel depuis un CSV, agrège le nombre d'incidents par service, et extrait les années les plus critiques via des transformations Spark DataFrame.",
+  tags: ['Apache Spark', 'Spark SQL', 'Java', 'Maven'],
+  image: 'images/projects/Spark%20Incident%20Analyzer.png',
+  githubUrl: 'https://github.com/YOUHAD08/spark-incident-analyzer.git',
+  featured: false
+};
+
+PROJECTS[50] = {
+  title: 'Apache Spark Sales Processor',
+  description: 'Java-based Apache Spark data pipelines that aggregate enterprise sales metrics per city and per year in local and distributed cluster environments using Dockerized Hadoop HDFS.',
+  descriptionFr: "Des pipelines de données Apache Spark en Java qui agrègent les métriques de ventes d'entreprise par ville et par année, en environnements locaux et clusters distribués via Hadoop HDFS conteneurisé.",
+  tags: ['Apache Spark', 'Java', 'Hadoop HDFS', 'Docker', 'Big Data', 'MapReduce'],
+  image: 'images/projects/Apache-Spark-Sales-Processor.png',
+  githubUrl: 'https://github.com/YOUHAD08/Apache-Spark-Sales-Processor.git',
+  featured: false
+};
+
+PROJECTS[51] = {
+  title: 'Sales Analysis Dashboard',
+  description: 'A Python data analysis project utilizing Pandas, NumPy, and Seaborn to analyze multi-sheet sales data (2018–2019), generating YoY growth metrics, customer rankings, channel profitability analyses, and integrated dashboard visualizations.',
+  descriptionFr: "Un projet d'analyse de données Python utilisant Pandas, NumPy et Seaborn pour analyser des données de ventes multi-feuilles (2018-2019), générant des métriques de croissance annuelle, des classements clients, des analyses de rentabilité par canal, et des visualisations de tableau de bord intégrées.",
+  tags: ['Python', 'Pandas', 'Data Analysis', 'Matplotlib', 'Seaborn', 'Jupyter Notebook', 'Data Visualization'],
+  image: 'images/projects/Sales%20Analysis%20Project.png',
+  githubUrl: 'https://github.com/YOUHAD08/Sales-Analysis-Project.git',
+  featured: false
+};
+
+PROJECTS[52] = {
+  title: 'HDFS Operations Practicum',
+  description: 'A hands-on guide and practical demonstration covering fundamental Hadoop Distributed File System (HDFS) CLI operations, including directory creation, file I/O, local-to-HDFS data transfers, and recursive system maintenance.',
+  descriptionFr: "Un guide pratique et une démonstration couvrant les opérations CLI fondamentales du système de fichiers distribué Hadoop (HDFS), incluant la création de répertoires, les I/O de fichiers, les transferts de données locales vers HDFS, et la maintenance système récursive.",
+  tags: ['HDFS', 'Hadoop', 'CLI', 'Big Data', 'Distributed Systems', 'Data Engineering'],
+  image: 'images/projects/HDFS%20File%20System%20Manipulation.png',
+  githubUrl: 'https://github.com/YOUHAD08/HDFS-File-System-Manipulation.git',
+  featured: false
+};
+
+PROJECTS[53] = {
+  title: 'AWS S3 Static Website Hosting',
+  description: 'A hands-on cloud storage project configuring an Amazon S3 bucket for public static website hosting, implementing Access Control Lists (ACLs), and enforcing explicit JSON bucket policies for write/delete protection.',
+  descriptionFr: "Un projet pratique de stockage cloud configurant un bucket Amazon S3 pour l'hébergement de site web statique public, mettant en œuvre des listes de contrôle d'accès (ACL), et appliquant des politiques de bucket JSON explicites pour la protection en écriture/suppression.",
+  tags: ['Amazon S3', 'Static Web Hosting', 'Cloud Security', 'AWS IAM'],
+  image: 'images/projects/s3-architecture.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/tree/main/01-aws-basics/02-aws-static-website-s3',
+  featured: false
+};
+
+PROJECTS[54] = {
+  title: 'AWS IAM Tag-Based Access Control',
+  description: 'An AWS security implementation utilizing Identity and Access Management (IAM) to enforce tag-based conditional access controls, least-privilege user groups, custom JSON policies, and account aliases across dev and prod EC2 environments.',
+  descriptionFr: "Une implémentation de sécurité AWS utilisant Identity and Access Management (IAM) pour appliquer des contrôles d'accès conditionnels basés sur les tags, des groupes d'utilisateurs à moindre privilège, des politiques JSON personnalisées, et des alias de compte entre les environnements EC2 dev et prod.",
+  tags: ['AWS IAM', 'Cloud Security', 'Amazon EC2', 'Access Control'],
+  image: 'images/projects/Cloud%20Security%20with%20AWS%20IAM.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/tree/main/01-aws-basics/03-aws-iam-security',
+  featured: false
+};
+
+PROJECTS[55] = {
+  title: 'AWS VPC Monitoring with Flow Logs',
+  description: 'A networking and monitoring project establishing cross-VPC peering, configuring IAM service roles, capturing traffic with Amazon VPC Flow Logs, and running analytical queries on network data using CloudWatch Logs Insights.',
+  descriptionFr: "Un projet de réseau et de surveillance établissant un peering inter-VPC, configurant des rôles de service IAM, capturant le trafic avec Amazon VPC Flow Logs, et exécutant des requêtes analytiques sur les données réseau via CloudWatch Logs Insights.",
+  tags: ['Amazon VPC', 'Subnets', 'Internet Gateway', 'Route Tables', 'IP Routing', 'Amazon EC2', 'VPC Flow Log', 'Security Groups', 'NACLs', 'Stateful Firewall', 'Stateless Security', 'AWS CLI'],
+  image: 'images/projects/AWS%20VPC%20Monitoring%20with%20Flow%20Logs.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/02-networking/10-vpc-monitoring-with-flow-logs/VPC-Monitoring-with-Flow-Logs.md',
+  featured: false
+};
+
+PROJECTS[56] = {
+  title: 'Access S3 from a VPC',
+  description: 'An AWS networking and storage integration setting up an isolated Amazon VPC with an Amazon EC2 instance. Configures credential-based AWS CLI authentication to manage secure Amazon S3 data transfers directly from the instance environment.',
+  descriptionFr: "Une intégration réseau et stockage AWS mettant en place un Amazon VPC isolé avec une instance Amazon EC2. Configure une authentification AWS CLI basée sur des identifiants pour gérer des transferts de données Amazon S3 sécurisés directement depuis l'environnement de l'instance.",
+  tags: ['Amazon VPC', 'Amazon EC2', 'Amazon S3', 'IAM', 'AWS CLI', 'IAM Access Keys'],
+  image: 'images/projects/Access%20S3%20from%20a%20VPC.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/02-networking/11-access-s3-from-a-vpc/access-s3-from-a-vpc.md',
+  featured: false
+};
+
+PROJECTS[57] = {
+  title: 'VPC Endpoints',
+  description: 'An AWS networking project establishing private S3 connectivity using a VPC Gateway Endpoint with custom route tables, CLI management, and explicit bucket and endpoint policies to block public access.',
+  descriptionFr: "Un projet de réseau AWS établissant une connectivité S3 privée via un VPC Gateway Endpoint avec des tables de routage personnalisées, une gestion CLI, et des politiques explicites de bucket et d'endpoint pour bloquer l'accès public.",
+  tags: ['Amazon VPC', 'Amazon S3', 'Amazon EC2', 'AWS IAM', 'VPC Gateway Endpoints', 'VPC Route Tables', 'S3 Bucket Policies', 'Endpoint Policies', 'AWS CLI', 'Private Networking', 'Network Security'],
+  image: 'images/projects/VPC%20Endpoints.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/tree/main/02-networking/12-vpc-endpoints',
+  featured: false
+};
+
+PROJECTS[58] = {
+  title: 'Connect a Web App with Aurora',
+  description: 'An AWS database and web hosting implementation configuring an Apache/PHP web application on Amazon EC2, connecting securely to an Amazon Aurora MySQL database cluster, and validating real-time record manipulation via the MySQL CLI.',
+  descriptionFr: "Une implémentation de base de données et d'hébergement web AWS configurant une application web Apache/PHP sur Amazon EC2, se connectant en toute sécurité à un cluster de base de données Amazon Aurora MySQL, et validant la manipulation d'enregistrements en temps réel via le CLI MySQL.",
+  tags: ['Amazon Aurora', 'Amazon EC2', 'AWS VPC', 'AWS IAM'],
+  image: 'images/projects/Connect%20a%20Web%20App%20with%20Aurora.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/tree/main/03-databases/15-connect-web-app-with-aurora',
+  featured: false
+};
+
+PROJECTS[59] = {
+  title: 'Query Data with DynamoDB',
+  description: 'An AWS database implementation demonstrating NoSQL data management in Amazon DynamoDB, including table creation, partition and sort key utilization, strongly consistent CLI-based queries, and multi-table ACID transactions executed via AWS CloudShell.',
+  descriptionFr: "Une implémentation de base de données AWS démontrant la gestion de données NoSQL dans Amazon DynamoDB, incluant la création de tables, l'utilisation de clés de partition et de tri, des requêtes CLI fortement cohérentes, et des transactions ACID multi-tables exécutées via AWS CloudShell.",
+  tags: ['DynamoDB', 'AWS CloudShell', 'AWS Management Console', 'NoSQL', 'Partition Keys', 'Sort Keys', 'Read Capacity Units (RCU)', 'Strong Consistency'],
+  image: 'images/projects/Query%20Data%20with%20DynamoDB.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/tree/main/03-databases/17-query-data-with-dynamodb',
+  featured: false
+};
+
+PROJECTS[60] = {
+  title: 'Encrypt Data with AWS KMS',
+  description: 'An AWS cloud security project demonstrating server-side encryption at rest using AWS KMS Customer Managed Keys (CMKs) to secure an Amazon DynamoDB table, testing layered defense through fine-grained IAM policy restrictions and key usage permissions.',
+  descriptionFr: "Un projet de sécurité cloud AWS démontrant le chiffrement côté serveur au repos avec des clés gérées par le client (CMK) AWS KMS pour sécuriser une table Amazon DynamoDB, testant une défense en profondeur via des restrictions de politique IAM granulaires et des permissions d'utilisation de clés.",
+  tags: ['AWS KMS', 'Amazon DynamoDB', 'AWS IAM', 'Encryption at Rest', 'Customer Managed Keys (CMK)', 'Symmetric Encryption', 'Access Control', 'Key Policies'],
+  image: 'images/projects/Encrypt%20Data%20with%20AWS%20KMS.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/04-security/18-encrypt-data-with-kms/aws-security-kms.md',
+  featured: false
+};
+
+PROJECTS[61] = {
+  title: 'Threat Detection with GuardDuty',
+  description: 'An AWS cloud security project simulating SQL injection, command injection, and EC2 instance metadata credential exfiltration on an OWASP Juice Shop web app, while using Amazon GuardDuty to detect unauthorized cross-account S3 access and identify malicious uploads via S3 Malware Protection.',
+  descriptionFr: "Un projet de sécurité cloud AWS simulant une injection SQL, une injection de commandes, et l'exfiltration d'identifiants de métadonnées d'instance EC2 sur une application web OWASP Juice Shop, tout en utilisant Amazon GuardDuty pour détecter les accès S3 inter-comptes non autorisés et identifier les téléversements malveillants via S3 Malware Protection.",
+  tags: ['Amazon GuardDuty', 'Amazon EC2', 'Amazon S3', 'AWS CloudFormation', 'AWS CloudShell', 'Amazon VPC', 'AWS Auto Scaling', 'Elastic Load Balancing', 'AWS IAM'],
+  image: 'images/projects/Threat%20Detection%20with%20GuardDuty.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/04-security/19-threat-detection/aws-security-guard-duty.md',
+  featured: false
+};
+
+PROJECTS[62] = {
+  title: 'Secure Secrets with Secrets Manager',
+  description: 'An AWS cloud security project demonstrating the remediation of hardcoded credentials in a FastAPI Python web application by integrating AWS Secrets Manager via Boto3, triggering GitHub Secret Scanning protections, and performing Git rebasing to purge sensitive history from the commit log.',
+  descriptionFr: "Un projet de sécurité cloud AWS démontrant la remédiation d'identifiants codés en dur dans une application web Python FastAPI en intégrant AWS Secrets Manager via Boto3, déclenchant les protections GitHub Secret Scanning, et effectuant un rebase Git pour purger l'historique sensible du journal des commits.",
+  tags: ['AWS Secrets Manager', 'AWS IAM', 'Amazon S3', 'AWS Management Console'],
+  image: 'images/projects/Secure%20Secrets%20with%20Secrets%20Manager.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/04-security/20-secrets-manager/aws-security-secrets-manager.md',
+  featured: false
+};
+
+PROJECTS[63] = {
+  title: 'Build a Security Monitoring System',
+  description: 'An AWS cloud security project establishing an end-to-end incident detection and alerting pipeline using AWS CloudTrail, Amazon CloudWatch Logs, and Amazon SNS to monitor GetSecretValue operations on AWS Secrets Manager, comparing metric filter alarms against raw CloudTrail SNS notifications for signal-to-noise optimization.',
+  descriptionFr: "Un projet de sécurité cloud AWS établissant un pipeline de détection d'incidents et d'alerte de bout en bout utilisant AWS CloudTrail, Amazon CloudWatch Logs, et Amazon SNS pour surveiller les opérations GetSecretValue sur AWS Secrets Manager, comparant les alarmes de filtres de métriques aux notifications SNS CloudTrail brutes pour optimiser le rapport signal/bruit.",
+  tags: ['AWS', 'AWS Secrets Manager', 'AWS CloudTrail', 'Amazon CloudWatch', 'Amazon CloudWatch Logs', 'Amazon SNS', 'Amazon S3', 'AWS CLI', 'AWS Management Console'],
+  image: 'images/projects/Build%20a%20Security%20Monitoring%20System.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/04-security/21-security-monitoring/aws-security-monitoring.md',
+  featured: false
+};
+
+PROJECTS[64] = {
+  title: 'AWS Serverless Three-Tier Web Application',
+  description: 'An AWS cloud architecture project demonstrating a serverless three-tier web application using S3, CloudFront, Lambda, API Gateway, and DynamoDB, with CORS configuration and dynamic API integration.',
+  descriptionFr: "Un projet d'architecture cloud AWS démontrant une application web serverless à trois niveaux utilisant S3, CloudFront, Lambda, API Gateway et DynamoDB, avec configuration CORS et intégration d'API dynamique.",
+  tags: ['AWS', 'Amazon S3', 'Amazon CloudFront', 'AWS Lambda', 'Amazon API Gateway', 'Amazon DynamoDB', 'AWS Management Console'],
+  image: 'images/projects/Three-Tier%20Web%20App.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/05-containers-compute/25-three-tier-app/aws-compute-three-tier.md',
+  featured: false
+};
+
+PROJECTS[65] = {
+  title: 'Amazon EKS Backend Deployment & Cluster Observability',
+  description: 'An end-to-end container orchestration project deploying a Python Flask application on Amazon EKS using Kubernetes, with Amazon ECR for container image delivery, NodePort services, and IAM-to-RBAC configuration for secure cluster access and real-time workload observability.',
+  descriptionFr: "Un projet d'orchestration de conteneurs de bout en bout déployant une application Python Flask sur Amazon EKS avec Kubernetes, utilisant Amazon ECR pour la livraison d'images de conteneurs, des services NodePort, et une configuration IAM-vers-RBAC pour un accès sécurisé au cluster et une observabilité en temps réel des charges de travail.",
+  tags: ['AWS', 'Amazon EKS', 'Amazon ECR', 'AWS IAM', 'Amazon EC2', 'CloudFormation', 'Docker', 'kubectl', 'GitHub'],
+  image: 'images/projects/Deploy%20Backend%20with%20Kubernetes.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/05-containers-compute/29-k8s-backend/aws-compute-eks4.md',
+  featured: false
+};
+
+PROJECTS[66] = {
+  title: 'Create S3 Buckets with Terraform',
+  description: 'A Terraform-based Infrastructure as Code (IaC) project automating AWS S3 storage provisioning, covering provider configuration, AWS credentials, resource definitions, tagging, and the terraform init → plan → apply workflow for creating buckets and uploading objects.',
+  descriptionFr: "Un projet d'Infrastructure as Code (IaC) basé sur Terraform automatisant le provisionnement de stockage AWS S3, couvrant la configuration du provider, les identifiants AWS, les définitions de ressources, le tagging, et le workflow terraform init → plan → apply pour créer des buckets et téléverser des objets.",
+  tags: ['AWS', 'Amazon S3', 'AWS CLI', 'AWS IAM', 'Terraform'],
+  image: 'images/projects/Create%20S3%20Buckets%20with%20Terraform.png',
+  githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/06-devops/40-terraform-s3/aws-devops-terraform.md',
+  featured: false
+};

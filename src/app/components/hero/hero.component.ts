@@ -56,7 +56,7 @@ const TEXT = {
 })
 export class HeroComponent implements AfterViewInit, OnDestroy {
   stats: Stat[] = [
-    { value: 45, suffix: '+', labelEn: 'Projects Built', labelFr: 'Projets Réalisés', display: 0 },
+    { value: 67, suffix: '+', labelEn: 'Projects Built', labelFr: 'Projets Réalisés', display: 0 },
     { value: 20, suffix: '+', labelEn: 'Technologies', labelFr: 'Technologies', display: 0 },
     { value: 16, suffix: '+', labelEn: 'Certifications & Courses', labelFr: 'Certifications & Cours', display: 0 }
   ];
