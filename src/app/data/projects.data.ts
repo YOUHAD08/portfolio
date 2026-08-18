@@ -6,6 +6,7 @@ export interface Project {
   image?: string;
   githubUrl?: string;
   liveUrl?: string;
+  docUrl?: string;
   featured?: boolean;
   inProgress?: boolean;
 }
@@ -159,7 +160,7 @@ PROJECTS[11] = {
   tags: ['Java', 'Git', 'GitHub', 'Spring Boot', 'Spring Cloud', 'Microservices Architecture', 'REST API'],
   image: 'images/projects/microservices-blueprint.png',
   githubUrl: 'https://github.com/YOUHAD08/Microservices-Architecture.git',
-  featured: true
+  featured: false
 };
 
 PROJECTS[12] = {
@@ -169,7 +170,7 @@ PROJECTS[12] = {
   tags: ['Python', 'Git', 'CML', 'GitHub Actions', 'scikit-learn'],
   image: 'images/projects/mlops-cml-pipeline.png',
   githubUrl: 'https://github.com/YOUHAD08/mlops-cml-pipeline.git',
-  featured: true
+  featured: false
 };
 
 PROJECTS[13] = {
@@ -179,7 +180,7 @@ PROJECTS[13] = {
   tags: ['Jenkins', 'Docker', 'CI-CD', 'Nginx', 'HTML'],
   image: 'images/projects/jenkins-docker-cicd.png',
   githubUrl: 'https://github.com/YOUHAD08/jenkins-docker-cicd.git',
-  featured: true
+  featured: false
 };
 
 PROJECTS[14] = {
@@ -209,7 +210,7 @@ PROJECTS[16] = {
   tags: ['Machine Learning', 'FastAPI', 'Docker', 'Python', 'scikit-learn', 'SMOTE', 'Data Validation', 'REST API', 'CI-CD', 'pytest'],
   image: 'images/projects/bank-churn-mlops-pipeline.png',
   githubUrl: 'https://github.com/YOUHAD08/bank-churn-mlops-pipeline.git',
-  featured: true
+  featured: false
 };
 
 PROJECTS[17] = {
@@ -219,7 +220,7 @@ PROJECTS[17] = {
   tags: ['SQL', 'T-SQL', 'Data Warehouse', 'EDA', 'BI', 'Medallion Architecture', 'Time-Series Analysis', 'ETL'],
   image: 'images/projects/sql-sales-datawarehouse-analysis.png',
   githubUrl: 'https://github.com/YOUHAD08/sql-sales-datawarehouse-analysis.git',
-  featured: false
+  featured: true
 };
 
 PROJECTS[18] = {
@@ -339,7 +340,7 @@ PROJECTS[29] = {
   tags: ['n8n', 'WhatsApp API', 'OpenAI Whisper', 'GPT-4', 'Google Workspace'],
   image: 'images/projects/whatsapp-agent.png',
   githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/WhatsApp%20Agent',
-  featured: false
+  featured: true
 };
 
 PROJECTS[30] = {
@@ -429,7 +430,7 @@ PROJECTS[38] = {
   tags: ['Spring AI', 'OpenAI GPT-4', 'Model Context Protocol', 'WhatsApp API', 'Java', 'Spring Boot'],
   image: 'images/projects/whatapp_bot.gif',
   githubUrl: 'https://github.com/YOUHAD08/WhatsApp-AI-Bot.git',
-  featured: true
+  featured: false
 };
 
 PROJECTS[39] = {
@@ -480,7 +481,7 @@ PROJECTS[43] = {
   tags: ['Spring Boot', 'Spring AI', 'OpenAI', 'Multimodal AI', 'DALL-E 3'],
   image: 'images/projects/Gen-demo.png',
   githubUrl: 'https://github.com/YOUHAD08/Gen-AI-Spring-Boot.git',
-  featured: true
+  featured: false
 };
 
 PROJECTS[44] = {
@@ -530,7 +531,7 @@ PROJECTS[48] = {
   tags: ['Apache Kafka', 'Kafka Streams', 'Java', 'Docker', 'Real-Time Analytics', 'Data Pipelines'],
   image: 'images/projects/Weather%20Data%20Processor.png',
   githubUrl: 'https://github.com/YOUHAD08/Kafka-Streams-Weather-Data-Processor.git',
-  featured: false
+  featured: true
 };
 
 PROJECTS[49] = {
@@ -700,7 +701,7 @@ PROJECTS[65] = {
   tags: ['AWS', 'Amazon EKS', 'Amazon ECR', 'AWS IAM', 'Amazon EC2', 'CloudFormation', 'Docker', 'kubectl', 'GitHub'],
   image: 'images/projects/Deploy%20Backend%20with%20Kubernetes.png',
   githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/05-containers-compute/29-k8s-backend/aws-compute-eks4.md',
-  featured: false
+  featured: true
 };
 
 PROJECTS[66] = {
@@ -711,4 +712,54 @@ PROJECTS[66] = {
   image: 'images/projects/Create%20S3%20Buckets%20with%20Terraform.png',
   githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/06-devops/40-terraform-s3/aws-devops-terraform.md',
   featured: false
+};
+
+PROJECTS[67] = {
+  title: 'AWS EC2 Web Server Deployment & Custom AMI',
+  description: 'Hands-on AWS project deploying and configuring an EC2 web server with automated Apache installation using User Data, Elastic IP, IMDSv2, CloudWatch monitoring, and a custom AMI for reusable multi-AZ deployments.',
+  descriptionFr: "Projet AWS pratique consistant à déployer et configurer un serveur web EC2 avec installation automatisée d'Apache via User Data, une Elastic IP, IMDSv2, une surveillance CloudWatch, et une AMI personnalisée pour des déploiements multi-AZ réutilisables.",
+  tags: ['EC2', 'Linux', 'Elastic IP', 'IMDSv2', 'AMI', 'CloudWatch', 'EBS', 'Security Groups', 'AZ'],
+  image: 'images/projects/Launch%20and%20Configure%20an%20EC2%20Instance.png',
+  docUrl: 'https://nextwork.ai/radiant_cyan_daring_clementine/docs/8caf04e1-4b52-408f-8b41-e08ba2f7798e',
+  featured: false
+};
+
+PROJECTS[68] = {
+  title: 'Mastering EC2 Storage with Amazon EBS',
+  description: 'Hands-on AWS project exploring Amazon EBS storage by creating, attaching, modifying, snapshotting, restoring, and encrypting volumes, while implementing cross-region disaster recovery and practicing SAA-C03 storage architecture decisions.',
+  descriptionFr: "Projet AWS pratique explorant le stockage Amazon EBS : création, attachement, modification, snapshots, restauration et chiffrement de volumes, avec mise en place d'une reprise après sinistre inter-régions et mise en pratique des décisions d'architecture de stockage SAA-C03.",
+  tags: ['EBS', 'EC2', 'EBS Volumes', 'gp3', 'io2', 'EBS Snapshots', 'AWS KMS', 'EBS Encryption', 'Elastic Volumes', 'IOPS', 'Throughput', 'Instance Store'],
+  image: 'images/projects/Mastering%20EC2%20Storage%20with%20Amazon%20EBS.png',
+  docUrl: 'https://nextwork.ai/radiant_cyan_daring_clementine/docs/6a35994f-d548-4a08-985f-f14649e3d31d',
+  featured: false
+};
+
+PROJECTS[69] = {
+  title: 'Build a Secure Multi-Tier VPC',
+  description: 'Hands-on AWS project building a secure multi-tier VPC with public/private subnets, layered security using Security Groups and NACLs, a bastion host for private access, IAM roles for S3 access, and ENI-based failover.',
+  descriptionFr: "Projet AWS pratique consistant à construire un VPC multi-niveaux sécurisé avec sous-réseaux publics/privés, une sécurité en couches via Security Groups et NACLs, un bastion host pour l'accès privé, des rôles IAM pour l'accès à S3, et un failover basé sur ENI.",
+  tags: ['VPC', 'Subnets', 'Security Groups', 'NACLs', 'NAT Gateway', 'Internet Gateway', 'Bastion Host', 'IAM Roles', 'EC2', 'ENI', 'Placement Groups', 'Enhanced Networking'],
+  image: 'images/projects/Build%20a%20Secure%20Multi-Tier%20VPC.png',
+  docUrl: 'https://nextwork.ai/radiant_cyan_daring_clementine/docs/16158760-9a18-44cb-bd18-c10fc54ca5c0',
+  featured: false
+};
+
+PROJECTS[70] = {
+  title: 'AWS Auto Scaling & Load Balancing Architecture',
+  description: 'Built a highly available AWS web application using an Application Load Balancer and EC2 Auto Scaling Group across multiple Availability Zones, with automatic scaling based on CPU utilization.',
+  descriptionFr: "Application web AWS hautement disponible construite avec un Application Load Balancer et un Auto Scaling Group EC2 répartis sur plusieurs zones de disponibilité, avec mise à l'échelle automatique basée sur l'utilisation du CPU.",
+  tags: ['AWS', 'Cloud Computing', 'EC2', 'ALB', 'Auto Scaling', 'Auto Scaling Group', 'Launch Template', 'User Data', 'Target Groups', 'CloudWatch'],
+  image: 'images/projects/AWS%20Auto%20Scaling%20%26%20Load%20Balancing%20Architecture.png',
+  docUrl: 'https://nextwork.ai/radiant_cyan_daring_clementine/docs/3fa3ed0d-b57d-408e-aaa1-10a201b4f5ef',
+  featured: false
+};
+
+PROJECTS[71] = {
+  title: 'Advanced AWS Scaling & Load Balancing',
+  description: 'Built an advanced AWS scaling architecture using ALB, NLB, EC2 Auto Scaling, CloudWatch, step and scheduled scaling, sticky sessions, warm pools, lifecycle hooks, and Elastic IPs.',
+  descriptionFr: "Architecture de mise à l'échelle AWS avancée construite avec ALB, NLB, Auto Scaling EC2, CloudWatch, mise à l'échelle par paliers et programmée, sessions persistantes, warm pools, lifecycle hooks et Elastic IPs.",
+  tags: ['ALB', 'NLB', 'GWLB', 'Auto Scaling', 'Launch Templates', 'Target Groups', 'CloudWatch Alarms', 'Step Scaling', 'Scheduled Scaling', 'Predictive Scaling', 'Sticky Sessions', 'Warm Pools', 'Lifecycle Hooks', 'Elastic IPs'],
+  image: 'images/projects/Advanced%20AWS%20Scaling%20%26%20Load%20Balancing.png',
+  docUrl: 'https://nextwork.ai/radiant_cyan_daring_clementine/docs/384a7893-9533-447f-bc23-8bbc358d7c9c',
+  featured: true
 };

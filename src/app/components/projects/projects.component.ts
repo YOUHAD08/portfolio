@@ -10,6 +10,7 @@ const TEXT = {
     tagline: "A selection of projects I've built, spanning backend systems, cloud infrastructure, and full-stack applications.",
     sourceCode: 'Source Code',
     liveDemo: 'Live Demo',
+    documentation: 'Documentation',
     viewAll: 'View All Projects',
     inProgress: 'In Progress',
     privateProject: 'Private Project'
@@ -19,6 +20,7 @@ const TEXT = {
     tagline: "Une sélection de projets que j'ai réalisés, couvrant les systèmes backend, l'infrastructure cloud et les applications full-stack.",
     sourceCode: 'Code Source',
     liveDemo: 'Démo en Direct',
+    documentation: 'Documentation',
     viewAll: 'Voir Tous les Projets',
     inProgress: 'En Cours',
     privateProject: 'Projet Privé'

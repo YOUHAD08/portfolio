@@ -22,6 +22,7 @@ const TEXT = {
     likeThisProject: 'Like this project',
     sourceCode: 'Source Code',
     liveDemo: 'Live Demo',
+    documentation: 'Documentation',
     loadMore: 'Load More',
     inProgress: 'In Progress',
     privateProject: 'Private Project'
@@ -40,6 +41,7 @@ const TEXT = {
     likeThisProject: 'Aimer ce projet',
     sourceCode: 'Code Source',
     liveDemo: 'Démo en Direct',
+    documentation: 'Documentation',
     loadMore: 'Charger Plus',
     inProgress: 'En Cours',
     privateProject: 'Projet Privé'
