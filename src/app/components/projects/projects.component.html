@@ -27,6 +27,8 @@
         *ngFor="let project of trackItems; trackBy: trackByIndex"
         [style.background-image]="project.image ? 'url(' + project.image + ')' : null"
       >
+        <span class="projects__in-progress" *ngIf="project.inProgress">{{ t.inProgress }}</span>
+
         <div class="projects__overlay">
           <h3 class="projects__title">{{ project.title }}</h3>
           <p class="projects__description">{{ language.lang() === 'en' ? project.description : project.descriptionFr }}</p>
@@ -56,6 +58,9 @@
               {{ t.liveDemo }}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
             </a>
+            <span class="projects__link projects__link--disabled" *ngIf="!project.githubUrl && !project.liveUrl">
+              {{ t.privateProject }}
+            </span>
           </div>
         </div>
       </article>

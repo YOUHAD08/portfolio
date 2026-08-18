@@ -22,7 +22,9 @@ const TEXT = {
     likeThisProject: 'Like this project',
     sourceCode: 'Source Code',
     liveDemo: 'Live Demo',
-    loadMore: 'Load More'
+    loadMore: 'Load More',
+    inProgress: 'In Progress',
+    privateProject: 'Private Project'
   },
   fr: {
     backToHome: "Retour à l'Accueil",
@@ -38,7 +40,9 @@ const TEXT = {
     likeThisProject: 'Aimer ce projet',
     sourceCode: 'Code Source',
     liveDemo: 'Démo en Direct',
-    loadMore: 'Charger Plus'
+    loadMore: 'Charger Plus',
+    inProgress: 'En Cours',
+    privateProject: 'Projet Privé'
   }
 };
 

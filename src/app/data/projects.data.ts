@@ -7,6 +7,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   featured?: boolean;
+  inProgress?: boolean;
 }
 
 function makeProjects(count: number, startIndex: number, tagPool: string[], startFeatured = 0): Project[] {
@@ -318,5 +319,176 @@ PROJECTS[27] = {
   tags: ['SQL Server', 'Data Warehouse', 'Medallion Architecture', 'ETL', 'Star Schema', 'T-SQL', 'Data Engineering', 'BI', 'Data Modeling', 'Kimball Methodology'],
   image: 'images/projects/sql_data_warehouse.png',
   githubUrl: 'https://github.com/YOUHAD08/sql_data_warehouse',
+  featured: true
+};
+
+PROJECTS[28] = {
+  title: 'Spring Cloud & Kafka Real-Time Event Pipeline',
+  description: 'An event-driven pipeline built with Spring Boot, Spring Cloud Stream, and Apache Kafka. Features automated event ingestion, windowed Kafka Streams aggregations, state store queries, and a live WebFlux SSE dashboard.',
+  descriptionFr: "Un pipeline événementiel construit avec Spring Boot, Spring Cloud Stream et Apache Kafka. Comprend l'ingestion automatisée d'événements, des agrégations Kafka Streams fenêtrées, des requêtes sur state store, et un tableau de bord SSE en direct via WebFlux.",
+  tags: ['Spring Boot', 'Apache Kafka', 'Kafka Streams', 'Event-Driven Architecture', 'WebFlux', 'Docker'],
+  image: 'images/projects/kafka-event-pipeline.gif',
+  githubUrl: 'https://github.com/YOUHAD08/event-driven-analytics-kafka-spring.git',
+  featured: true
+};
+
+PROJECTS[29] = {
+  title: 'WhatsApp Agent',
+  description: 'Multimodal AI assistant handling WhatsApp text/voice messages, managing Gmail and Google Calendar, and executing team operations via sub-workflows.',
+  descriptionFr: "Assistant IA multimodal gérant les messages texte/vocaux WhatsApp, la gestion de Gmail et Google Calendar, et l'exécution d'opérations d'équipe via des sous-workflows.",
+  tags: ['n8n', 'WhatsApp API', 'OpenAI Whisper', 'GPT-4', 'Google Workspace'],
+  image: 'images/projects/whatsapp-agent.png',
+  githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/WhatsApp%20Agent',
+  featured: false
+};
+
+PROJECTS[30] = {
+  title: 'Vector Database Pipeline',
+  description: 'Automated ingestion pipeline monitoring Google Drive to chunk documents, generate embeddings, and store them in Pinecone for semantic search.',
+  descriptionFr: "Pipeline d'ingestion automatisé surveillant Google Drive pour découper les documents, générer des embeddings et les stocker dans Pinecone pour la recherche sémantique.",
+  tags: ['n8n', 'Pinecone', 'OpenAI Embeddings', 'Google Drive', 'RAG'],
+  image: 'images/projects/vector-database-pipeline.jpg',
+  githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Vector%20Database',
+  featured: false
+};
+
+PROJECTS[31] = {
+  title: 'Sentiment Analysis Collector',
+  description: 'Public web form system that collects user feedback, categorizes sentiment using GPT-4 mini, and logs responses directly into Google Sheets.',
+  descriptionFr: "Système de formulaire web public qui collecte les retours utilisateurs, catégorise le sentiment via GPT-4 mini, et enregistre les réponses directement dans Google Sheets.",
+  tags: ['n8n', 'OpenAI', 'Google Sheets', 'Sentiment Analysis', 'Web Forms'],
+  image: 'images/projects/sentiment-analysis-collector.jpg',
+  githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Sentiment%20Analysis',
+  featured: false
+};
+
+PROJECTS[32] = {
+  title: 'Sponsorship Response Automation',
+  description: 'Email pipeline that identifies sponsorship inquiries via Gmail, checks criteria, and auto-generates custom rate responses using AI.',
+  descriptionFr: "Pipeline d'emails qui identifie les demandes de sponsoring via Gmail, vérifie les critères, et génère automatiquement des réponses tarifaires personnalisées grâce à l'IA.",
+  tags: ['n8n', 'Gmail API', 'OpenAI', 'Email Automation', 'Lead Management'],
+  image: 'images/projects/sponsorship-response-automation.png',
+  githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Respond%20to%20Sponsership',
+  featured: false
+};
+
+PROJECTS[33] = {
+  title: 'Financial RAG Chatbot',
+  description: 'Conversational interface connected to a Pinecone vector store to deliver context-aware, source-attributed Q&A on corporate financial reports.',
+  descriptionFr: "Interface conversationnelle connectée à une base vectorielle Pinecone pour fournir des réponses contextuelles et sourcées sur des rapports financiers d'entreprise.",
+  tags: ['n8n', 'RAG', 'Pinecone', 'GPT-4', 'Chatbot'],
+  image: 'images/projects/financial-rag-chatbot.png',
+  githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/RAG%20Chatbot',
+  featured: false
+};
+
+PROJECTS[34] = {
+  title: 'Sheet Generator Utility',
+  description: 'Lightweight automation flow designed to programmatically initialize and configure new Google Sheets spreadsheets on demand.',
+  descriptionFr: "Flux d'automatisation léger conçu pour initialiser et configurer de manière programmatique de nouvelles feuilles de calcul Google Sheets à la demande.",
+  tags: ['n8n', 'Google Sheets', 'Workflow Automation', 'Utility'],
+  image: 'images/projects/sheet-generator-utility.jpg',
+  githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Google%20Sheets',
+  featured: false
+};
+
+PROJECTS[35] = {
+  title: 'Form Booking with Local Backup',
+  description: 'Hotel reservation form processing workflow that logs submissions to Airtable while converting and backing up records locally.',
+  descriptionFr: "Workflow de traitement de formulaire de réservation hôtelière qui enregistre les soumissions dans Airtable tout en convertissant et sauvegardant les enregistrements localement.",
+  tags: ['n8n', 'Airtable', 'Web Forms', 'Data Backup', 'Data Processing'],
+  image: 'images/projects/form-booking-local-backup.jpg',
+  githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Form%20Submission%20to%20Airtable',
+  featured: false
+};
+
+PROJECTS[36] = {
+  title: 'Order Notification Assistant',
+  description: 'E-commerce tracking workflow that monitors Airtable for new orders and triggers AI-formatted notification emails to management.',
+  descriptionFr: "Workflow de suivi e-commerce qui surveille Airtable pour les nouvelles commandes et déclenche des emails de notification formatés par IA vers la direction.",
+  tags: ['n8n', 'Airtable', 'Gmail API', 'OpenAI'],
+  image: 'images/projects/order-notification-assistant.jpg',
+  githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Customer%20Service%20Assitance',
+  featured: false
+};
+
+PROJECTS[37] = {
+  title: 'AI Email Automation System',
+  description: 'Multi-agent pipeline integrating vector contact lookups, custom HTML templating, and AI composition to execute targeted email outreach.',
+  descriptionFr: "Pipeline multi-agents intégrant la recherche de contacts vectorielle, un templating HTML personnalisé, et la composition par IA pour exécuter des campagnes d'emailing ciblées.",
+  tags: ['n8n', 'Pinecone', 'Gmail API', 'GPT-4', 'Multi-Agent'],
+  image: 'images/projects/ai-email-automation-system.png',
+  githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/AI-powered%20email%20automation%20system',
+  featured: false
+};
+
+PROJECTS[38] = {
+  title: 'WhatsApp AI Bot',
+  description: "An intelligent WhatsApp chatbot powered by Spring AI, OpenAI's GPT-4, and Model Context Protocol (MCP) for dynamic tool management and employee data queries.",
+  descriptionFr: "Un chatbot WhatsApp intelligent propulsé par Spring AI, GPT-4 d'OpenAI, et le Model Context Protocol (MCP) pour la gestion dynamique d'outils et les requêtes de données employés.",
+  tags: ['Spring AI', 'OpenAI GPT-4', 'Model Context Protocol', 'WhatsApp API', 'Java', 'Spring Boot'],
+  image: 'images/projects/whatapp_bot.gif',
+  githubUrl: 'https://github.com/YOUHAD08/WhatsApp-AI-Bot.git',
+  featured: true
+};
+
+PROJECTS[39] = {
+  title: 'TubeNotes',
+  description: 'An AI-powered mobile app that turns voice recordings of video ideas into complete YouTube content packages — including scripts, titles, and thumbnail concepts.',
+  descriptionFr: "Une application mobile propulsée par l'IA qui transforme des enregistrements vocaux d'idées vidéo en packages de contenu YouTube complets — scripts, titres et concepts de miniatures inclus.",
+  tags: ['Flutter', 'Voice-to-Text'],
+  image: 'images/projects/TubeNotes.png',
+  githubUrl: 'https://github.com/YOUHAD08/TubeNotes.git',
+  featured: true,
+  inProgress: true
+};
+
+PROJECTS[40] = {
+  title: 'Flutter Riverpod Todo App',
+  description: 'My first Flutter project – a simple and elegant Todo application built with Flutter, Riverpod (state management), and Slidable (for swipe actions).',
+  descriptionFr: "Mon premier projet Flutter – une application Todo simple et élégante construite avec Flutter, Riverpod (gestion d'état) et Slidable (pour les actions de balayage).",
+  tags: ['Flutter', 'Dart', 'Riverpod'],
+  image: 'images/projects/TODO_App.gif',
+  githubUrl: 'https://github.com/YOUHAD08/Flutter-Todo-App.git',
+  featured: false
+};
+
+PROJECTS[41] = {
+  title: 'Portfolio',
+  description: 'This portfolio itself — a fully responsive, bilingual (EN/FR) Angular site with dark/light theming, a Firebase-backed project like system, and an EmailJS-powered contact form.',
+  descriptionFr: "Ce portfolio lui-même — un site Angular entièrement responsive et bilingue (EN/FR) avec thème clair/sombre, un système de likes propulsé par Firebase, et un formulaire de contact via EmailJS.",
+  tags: ['Angular', 'TypeScript', 'SCSS', 'Firebase', 'EmailJS'],
+  image: 'images/projects/portfolio.png',
+  githubUrl: 'https://github.com/YOUHAD08/portfolio.git',
+  featured: true
+};
+
+PROJECTS[42] = {
+  title: 'Swai3.com — Moroccan Bac Tutoring Platform',
+  description: 'Microservices tutoring marketplace for Moroccan Bac students. Book tutors, pay securely, attend sessions via Google Meet, and access study materials — all in one platform.',
+  descriptionFr: "Marketplace de tutorat en microservices pour les élèves marocains du Bac. Réservez des tuteurs, payez en toute sécurité, assistez aux séances via Google Meet, et accédez aux supports de cours — le tout sur une seule plateforme.",
+  tags: ['Java', 'Spring Boot', 'Microservices', 'Kafka', 'PostgreSQL', 'Docker', 'Jenkins', 'MinIO', 'Spring Cloud', 'Eureka', 'Redis', 'Kubernetes', 'AWS'],
+  image: 'images/projects/logo.jpeg',
+  featured: true,
+  inProgress: true
+};
+
+PROJECTS[43] = {
+  title: 'Spring Boot Generative AI Demo',
+  description: 'A Spring Boot application showcasing Spring AI capabilities, including contextual chat, structured JSON output mapping, DALL-E 3 image generation, multimodal image analysis, and real-time response streaming.',
+  descriptionFr: "Une application Spring Boot présentant les capacités de Spring AI, incluant le chat contextuel, le mapping de sortie JSON structurée, la génération d'images DALL-E 3, l'analyse d'images multimodale, et le streaming de réponses en temps réel.",
+  tags: ['Spring Boot', 'Spring AI', 'OpenAI', 'Multimodal AI', 'DALL-E 3'],
+  image: 'images/projects/Gen-demo.png',
+  githubUrl: 'https://github.com/YOUHAD08/Gen-AI-Spring-Boot.git',
+  featured: true
+};
+
+PROJECTS[44] = {
+  title: 'E-Bank Management System',
+  description: 'A modern e-banking application built with Angular. It connects to a Spring Boot REST API backend to provide comprehensive customer and account management features.',
+  descriptionFr: "Une application bancaire moderne construite avec Angular. Elle se connecte à un backend Spring Boot via REST API pour offrir des fonctionnalités complètes de gestion des clients et des comptes.",
+  tags: ['Angular', 'TypeScript', 'Bootstrap', 'JWT Authentication', 'Spring Boot', 'Java', 'Spring Data JPA', 'MySQL', 'REST API'],
+  image: 'images/projects/e-bank-demo.gif',
+  githubUrl: 'https://github.com/YOUHAD08/e-bank-frontend-angular.git',
   featured: true
 };
