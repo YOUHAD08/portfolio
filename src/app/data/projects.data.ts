@@ -577,7 +577,7 @@ PROJECTS[48] = {
   category: 'Big Data / Data Engineering',
   image: 'images/projects/Weather%20Data%20Processor.png',
   githubUrl: 'https://github.com/YOUHAD08/Kafka-Streams-Weather-Data-Processor.git',
-  featured: true
+  featured: false
 };
 
 PROJECTS[49] = {
@@ -973,7 +973,7 @@ PROJECTS[84] = {
   category: 'AWS',
   image: 'images/projects/Multi-Region%20Failover%20with%20Global%20Accelerator.png',
   docUrl: 'https://nextwork.ai/radiant_cyan_daring_clementine/docs/596362ad-0e33-40be-95a1-8f2b201dd44e',
-  featured: false
+  featured: true
 };
 
 PROJECTS[85] = {
