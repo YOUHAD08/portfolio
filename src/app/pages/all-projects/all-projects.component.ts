@@ -6,6 +6,7 @@ import type { Unsubscribe } from 'firebase/firestore';
 import { PROJECTS, Project } from '../../data/projects.data';
 import { LikesService } from '../../services/likes.service';
 import { LanguageService } from '../../services/language.service';
+import { AnalyticsService } from '../../services/analytics.service';
 
 const TEXT = {
   en: {
@@ -128,8 +129,13 @@ export class AllProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
     private host: ElementRef<HTMLElement>,
     private likes: LikesService,
     private zone: NgZone,
-    public language: LanguageService
+    public language: LanguageService,
+    private analytics: AnalyticsService
   ) {}
+
+  trackLinkClick(project: Project, linkType: 'github' | 'live' | 'doc'): void {
+    this.analytics.trackProjectClick(project.title, linkType);
+  }
 
   get t() {
     return TEXT[this.language.lang()];

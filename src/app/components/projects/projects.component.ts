@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { PROJECTS, Project } from '../../data/projects.data';
 import { LanguageService } from '../../services/language.service';
+import { AnalyticsService } from '../../services/analytics.service';
 
 const TEXT = {
   en: {
@@ -49,7 +50,11 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
 
   @ViewChild('track') track!: ElementRef<HTMLElement>;
 
-  constructor(public language: LanguageService) {}
+  constructor(public language: LanguageService, private analytics: AnalyticsService) {}
+
+  trackLinkClick(project: Project, linkType: 'github' | 'live' | 'doc'): void {
+    this.analytics.trackProjectClick(project.title, linkType);
+  }
 
   get t() {
     return TEXT[this.language.lang()];
