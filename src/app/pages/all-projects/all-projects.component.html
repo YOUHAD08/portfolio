@@ -34,15 +34,38 @@
               <span class="all-projects__filter-menu-check"></span>
               {{ categoryLabel(group.category) }}
             </button>
-            <button
-              class="all-projects__filter-menu-item"
-              *ngFor="let tag of group.tags"
-              [class.is-active]="isTagActive(tag)"
-              (click)="toggleTag(tag)"
-            >
-              <span class="all-projects__filter-menu-check"></span>
-              {{ tag }}
-            </button>
+            <ng-container *ngIf="group.tree; else flatTags">
+              <div class="all-projects__filter-menu-node" *ngFor="let node of group.tree">
+                <button
+                  class="all-projects__filter-menu-item all-projects__filter-menu-item--primary"
+                  [class.is-active]="isTagActive(node.primary)"
+                  (click)="toggleTag(node.primary)"
+                >
+                  <span class="all-projects__filter-menu-check"></span>
+                  {{ node.primary }}
+                </button>
+                <button
+                  class="all-projects__filter-menu-item all-projects__filter-menu-item--secondary"
+                  *ngFor="let child of node.children"
+                  [class.is-active]="isTagActive(child)"
+                  (click)="toggleTag(child)"
+                >
+                  <span class="all-projects__filter-menu-check"></span>
+                  {{ child }}
+                </button>
+              </div>
+            </ng-container>
+            <ng-template #flatTags>
+              <button
+                class="all-projects__filter-menu-item"
+                *ngFor="let tag of group.tags"
+                [class.is-active]="isTagActive(tag)"
+                (click)="toggleTag(tag)"
+              >
+                <span class="all-projects__filter-menu-check"></span>
+                {{ tag }}
+              </button>
+            </ng-template>
           </div>
           <p class="all-projects__filter-menu-empty" *ngIf="menuGroups.length === 0">{{ t.noMatchingTags }}</p>
         </div>

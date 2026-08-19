@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import type { Unsubscribe } from 'firebase/firestore';
-import { PROJECTS, Project } from '../../data/projects.data';
+import { PROJECTS, Project, ProjectCategory } from '../../data/projects.data';
 import { LikesService } from '../../services/likes.service';
 import { LanguageService } from '../../services/language.service';
 import { AnalyticsService } from '../../services/analytics.service';
@@ -49,59 +49,117 @@ const TEXT = {
   }
 };
 
-const PAGE_SIZE = 9;
-
-const CATEGORY_MAP: Record<string, string> = {
-  HTML: 'Languages', CSS: 'Languages', CSS3: 'Languages', JavaScript: 'Languages',
-  TypeScript: 'Languages', Java: 'Languages', Python: 'Languages', SQL: 'Languages', 'T-SQL': 'Languages',
-  Angular: 'Frontend',
-  'Spring Boot': 'Backend & Frameworks', 'Spring Cloud': 'Backend & Frameworks', 'Spring AI': 'Backend & Frameworks',
-  'Microservices Architecture': 'Backend & Frameworks', 'REST API': 'Backend & Frameworks', FastAPI: 'Backend & Frameworks',
-  'AI Agent': 'AI & Machine Learning', RAG: 'AI & Machine Learning', 'Semantic-Search': 'AI & Machine Learning',
-  'Vector Store': 'AI & Machine Learning', LLM: 'AI & Machine Learning', 'scikit-learn': 'AI & Machine Learning', CML: 'AI & Machine Learning',
-  'Machine Learning': 'AI & Machine Learning', SMOTE: 'AI & Machine Learning', 'Data Validation': 'AI & Machine Learning',
-  OpenCV: 'AI & Machine Learning', 'Image Processing': 'AI & Machine Learning',
-  'Image Denoising': 'AI & Machine Learning', Convolution: 'AI & Machine Learning', 'Image Sharpening': 'AI & Machine Learning',
-  'scikit-image': 'AI & Machine Learning', 'Histogram Specification': 'AI & Machine Learning',
-  KNN: 'AI & Machine Learning', 'CIFAR-10': 'AI & Machine Learning', 'Cross-Validation': 'AI & Machine Learning', 'Image Classification': 'AI & Machine Learning',
-  'Data Warehouse': 'Data & Analytics', EDA: 'Data & Analytics', BI: 'Data & Analytics', 'Medallion Architecture': 'Data & Analytics',
-  'Time-Series Analysis': 'Data & Analytics', ETL: 'Data & Analytics', Matplotlib: 'Data & Analytics', 'Data Visualization': 'Data & Analytics',
-  'SQL Server': 'Data & Analytics', 'Star Schema': 'Data & Analytics', 'Data Engineering': 'Data & Analytics',
-  'Data Modeling': 'Data & Analytics', 'Kimball Methodology': 'Data & Analytics',
-  CodePipeline: 'AWS', CodeBuild: 'AWS', CodeDeploy: 'AWS', CloudFormation: 'AWS', S3: 'AWS', VPC: 'AWS', CodeArtifact: 'AWS', EC2: 'AWS',
-  Docker: 'DevOps', Jenkins: 'DevOps', 'CI-CD': 'DevOps', Nginx: 'DevOps', 'GitHub Actions': 'DevOps', pytest: 'DevOps',
-  Git: 'Version Control', GitHub: 'Version Control'
+const CATEGORY_LABELS_FR: Record<ProjectCategory, string> = {
+  Frontend: 'Frontend',
+  Backend: 'Backend',
+  'Mobile Dev': 'Mobile',
+  DevOps: 'DevOps',
+  AWS: 'AWS',
+  SecOps: 'SecOps',
+  'Big Data': 'Big Data',
+  MLOps: 'MLOps',
+  'AI/GenAI': 'IA/GenAI'
 };
 
-const CATEGORY_ORDER = [
-  'Languages',
-  'Frontend',
-  'Backend & Frameworks',
-  'AI & Machine Learning',
-  'Data & Analytics',
+const CATEGORY_ORDER: ProjectCategory[] = [
   'AWS',
+  'Backend',
+  'Frontend',
   'DevOps',
-  'Version Control'
+  'SecOps',
+  'AI/GenAI',
+  'MLOps',
+  'Big Data',
+  'Mobile Dev'
 ];
 
-const CATEGORY_LABELS_FR: Record<string, string> = {
-  Languages: 'Langages',
-  Frontend: 'Frontend',
-  'Backend & Frameworks': 'Backend & Frameworks',
-  'AI & Machine Learning': 'IA & Machine Learning',
-  'Data & Analytics': 'Données & Analytique',
-  AWS: 'AWS',
-  DevOps: 'DevOps',
-  'Version Control': 'Contrôle de Version',
-  Other: 'Autre'
-};
-
-interface TagGroup {
-  category: string;
-  tags: string[];
+interface TreeNode {
+  primary: string;
+  children: string[];
 }
 
+interface TagGroup {
+  category: ProjectCategory;
+  tags: string[];
+  tree?: TreeNode[];
+}
+
+const PAGE_SIZE = 9;
+
 const PROJECTS_NEWEST_FIRST = [...PROJECTS].reverse();
+
+const AWS_TREE: TreeNode[] = [
+  { primary: 'Amazon EC2', children: ['AMI', 'Instance Store', 'Spot Instances', 'Launch Template', 'Placement Groups'] },
+  { primary: 'Amazon VPC', children: ['ENI', 'Internet Gateway', 'NAT Gateway', 'NAT Instance', 'Subnets', 'Route Tables', 'Security Groups', 'NACLs', 'VPC Endpoints', 'VPC Gateway Endpoints', 'VPC Flow Log'] },
+  { primary: 'Amazon EBS', children: ['EBS Volumes', 'EBS Snapshots'] },
+  { primary: 'Amazon S3', children: ['S3 Bucket Policies'] },
+  { primary: 'Amazon CloudFront', children: ['OAC'] },
+  { primary: 'Amazon Route 53', children: ['Route 53 Alias record'] },
+  { primary: 'Amazon Aurora', children: ['Aurora Global Database'] },
+  { primary: 'Amazon RDS', children: ['RDS Proxy', 'Read Replica'] },
+  { primary: 'Amazon CloudWatch', children: ['CloudWatch Alarms', 'Amazon CloudWatch Logs'] },
+  { primary: 'Amazon SQS', children: ['Dead Letter Queue'] },
+  { primary: 'Amazon Kinesis Data Streams', children: ['Kinesis Shards'] },
+  { primary: 'AWS IAM', children: ['IAM Roles', 'IAM Access Keys'] },
+  { primary: 'Amazon API Gateway', children: [] },
+  { primary: 'Amazon DynamoDB', children: [] },
+  { primary: 'Amazon ECR', children: [] },
+  { primary: 'Amazon ECS', children: [] },
+  { primary: 'Amazon EKS', children: [] },
+  { primary: 'Amazon ElastiCache', children: [] },
+  { primary: 'Amazon EventBridge', children: [] },
+  { primary: 'Amazon FSx', children: [] },
+  { primary: 'Amazon Kinesis Firehose', children: [] },
+  { primary: 'Amazon MQ', children: [] },
+  { primary: 'Amazon Route 53 Resolver', children: [] },
+  { primary: 'Amazon SNS', children: [] },
+  { primary: 'AWS Backup', children: [] },
+  { primary: 'AWS CLI', children: [] },
+  { primary: 'AWS CloudFormation', children: [] },
+  { primary: 'AWS CloudShell', children: [] },
+  { primary: 'AWS Compute Optimizer', children: [] },
+  { primary: 'AWS Database Migration Service', children: [] },
+  { primary: 'AWS DataSync', children: [] },
+  { primary: 'AWS Global Accelerator', children: [] },
+  { primary: 'AWS KMS', children: [] },
+  { primary: 'AWS Lambda', children: [] },
+  { primary: 'AWS Management Console', children: [] },
+  { primary: 'AWS PrivateLink', children: [] },
+  { primary: 'AWS Secrets Manager', children: [] },
+  { primary: 'AWS Snow Family', children: [] },
+  { primary: 'AWS Storage Gateway', children: [] },
+  { primary: 'AWS Transfer Family', children: [] },
+  { primary: 'Auto Scaling Group', children: [] },
+  { primary: 'Elastic IP', children: [] },
+  { primary: 'ALB', children: [] },
+  { primary: 'NLB', children: [] },
+  { primary: 'GWLB', children: [] },
+  { primary: 'Target Groups', children: [] },
+  { primary: 'CodeArtifact', children: [] },
+  { primary: 'CodeBuild', children: [] },
+  { primary: 'CodeDeploy', children: [] },
+  { primary: 'CodePipeline', children: [] },
+  { primary: 'Amazon GuardDuty', children: [] },
+  { primary: 'AWS CloudTrail', children: [] }
+];
+
+function buildCategoryGroups(): TagGroup[] {
+  return CATEGORY_ORDER.map((category) => {
+    const usedTags = new Set(PROJECTS.filter((p) => p.category === category).flatMap((p) => p.tags));
+    const tags = Array.from(usedTags).sort((a, b) => a.localeCompare(b));
+
+    if (category === 'AWS') {
+      const tree = AWS_TREE
+        .map((node) => ({ primary: node.primary, children: node.children.filter((c) => usedTags.has(c)) }))
+        .filter((node) => usedTags.has(node.primary) || node.children.length > 0);
+      return { category, tags, tree };
+    }
+
+    return { category, tags };
+  }).filter((g) => g.tags.length > 0);
+}
+
+const ALL_GROUPS = buildCategoryGroups();
 
 @Component({
   selector: 'app-all-projects',
@@ -111,11 +169,10 @@ const PROJECTS_NEWEST_FIRST = [...PROJECTS].reverse();
   styleUrl: './all-projects.component.scss'
 })
 export class AllProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
-  tags = Array.from(new Set(PROJECTS.flatMap((p) => p.tags)));
   activeTags = new Set<string>();
-  visibleCount = PAGE_SIZE;
   tagSearch = '';
   filterMenuOpen = false;
+  visibleCount = PAGE_SIZE;
 
   private likesMap: Record<string, number> = {};
   private likedSet = new Set<string>();
@@ -141,60 +198,29 @@ export class AllProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
     return TEXT[this.language.lang()];
   }
 
-  categoryLabel(category: string): string {
-    return this.language.lang() === 'en' ? category : CATEGORY_LABELS_FR[category] || category;
-  }
-
-  ngOnInit(): void {
-    for (const p of PROJECTS) {
-      if (this.likes.hasLiked(p.title)) this.likedSet.add(p.title);
-      this.likeUnsubscribers.push(
-        this.likes.watchLikes(p.title, (count) => this.zone.run(() => (this.likesMap[p.title] = count)))
-      );
-    }
-  }
-
-  likeCount(project: Project): number {
-    return this.likesMap[project.title] || 0;
-  }
-
-  isLiked(project: Project): boolean {
-    return this.likedSet.has(project.title);
-  }
-
-  isLikeCoolingDown(project: Project): boolean {
-    return this.likeCooldownSet.has(project.title);
-  }
-
-  async toggleLike(project: Project, event: Event): Promise<void> {
-    event.stopPropagation();
-    event.preventDefault();
-    if (this.likeCooldownSet.has(project.title)) return;
-    this.likeCooldownSet.add(project.title);
-    setTimeout(() => this.likeCooldownSet.delete(project.title), 800);
-
-    if (this.likedSet.has(project.title)) this.likedSet.delete(project.title);
-    else this.likedSet.add(project.title);
-    await this.likes.toggleLike(project.title);
-  }
-
-  private get allGroups(): TagGroup[] {
-    const map = new Map<string, string[]>();
-    for (const t of this.tags) {
-      const cat = CATEGORY_MAP[t] || 'Other';
-      if (!map.has(cat)) map.set(cat, []);
-      map.get(cat)!.push(t);
-    }
-    const ordered = CATEGORY_ORDER.filter((c) => map.has(c)).map((c) => ({ category: c, tags: map.get(c)! }));
-    if (map.has('Other')) ordered.push({ category: 'Other', tags: map.get('Other')! });
-    return ordered;
+  categoryLabel(category: ProjectCategory): string {
+    return this.language.lang() === 'en' ? category : CATEGORY_LABELS_FR[category];
   }
 
   get menuGroups(): TagGroup[] {
     const q = this.tagSearch.trim().toLowerCase();
-    if (!q) return this.allGroups;
-    return this.allGroups
-      .map((g) => ({ category: g.category, tags: g.tags.filter((t) => t.toLowerCase().includes(q)) }))
+    if (!q) return ALL_GROUPS;
+    return ALL_GROUPS
+      .map((g) => {
+        const tags = g.tags.filter((t) => t.toLowerCase().includes(q));
+        if (!g.tree) return { category: g.category, tags };
+
+        const tree = g.tree
+          .map((node) => {
+            const primaryMatches = node.primary.toLowerCase().includes(q);
+            const children = primaryMatches ? node.children : node.children.filter((c) => c.toLowerCase().includes(q));
+            return { primary: node.primary, children, primaryMatches };
+          })
+          .filter((node) => node.primaryMatches || node.children.length > 0)
+          .map(({ primary, children }) => ({ primary, children }));
+
+        return { category: g.category, tags, tree };
+      })
       .filter((g) => g.tags.length > 0);
   }
 
@@ -250,6 +276,39 @@ export class AllProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.filterMenuOpen && !this.host.nativeElement.contains(event.target as Node)) {
       this.filterMenuOpen = false;
     }
+  }
+
+  ngOnInit(): void {
+    for (const p of PROJECTS) {
+      if (this.likes.hasLiked(p.title)) this.likedSet.add(p.title);
+      this.likeUnsubscribers.push(
+        this.likes.watchLikes(p.title, (count) => this.zone.run(() => (this.likesMap[p.title] = count)))
+      );
+    }
+  }
+
+  likeCount(project: Project): number {
+    return this.likesMap[project.title] || 0;
+  }
+
+  isLiked(project: Project): boolean {
+    return this.likedSet.has(project.title);
+  }
+
+  isLikeCoolingDown(project: Project): boolean {
+    return this.likeCooldownSet.has(project.title);
+  }
+
+  async toggleLike(project: Project, event: Event): Promise<void> {
+    event.stopPropagation();
+    event.preventDefault();
+    if (this.likeCooldownSet.has(project.title)) return;
+    this.likeCooldownSet.add(project.title);
+    setTimeout(() => this.likeCooldownSet.delete(project.title), 800);
+
+    if (this.likedSet.has(project.title)) this.likedSet.delete(project.title);
+    else this.likedSet.add(project.title);
+    await this.likes.toggleLike(project.title);
   }
 
   private get filtered(): Project[] {
