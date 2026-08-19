@@ -4,6 +4,7 @@ export interface Project {
   descriptionFr: string;
   tags: string[];
   image?: string;
+  video?: string;
   githubUrl?: string;
   liveUrl?: string;
   docUrl?: string;
@@ -328,7 +329,8 @@ PROJECTS[28] = {
   description: 'An event-driven pipeline built with Spring Boot, Spring Cloud Stream, and Apache Kafka. Features automated event ingestion, windowed Kafka Streams aggregations, state store queries, and a live WebFlux SSE dashboard.',
   descriptionFr: "Un pipeline événementiel construit avec Spring Boot, Spring Cloud Stream et Apache Kafka. Comprend l'ingestion automatisée d'événements, des agrégations Kafka Streams fenêtrées, des requêtes sur state store, et un tableau de bord SSE en direct via WebFlux.",
   tags: ['Spring Boot', 'Apache Kafka', 'Kafka Streams', 'Event-Driven Architecture', 'WebFlux', 'Docker'],
-  image: 'images/projects/kafka-event-pipeline.gif',
+  image: 'images/projects/kafka-event-pipeline-poster.jpg',
+  video: 'images/projects/kafka-event-pipeline.mp4',
   githubUrl: 'https://github.com/YOUHAD08/event-driven-analytics-kafka-spring.git',
   featured: true
 };
@@ -428,7 +430,8 @@ PROJECTS[38] = {
   description: "An intelligent WhatsApp chatbot powered by Spring AI, OpenAI's GPT-4, and Model Context Protocol (MCP) for dynamic tool management and employee data queries.",
   descriptionFr: "Un chatbot WhatsApp intelligent propulsé par Spring AI, GPT-4 d'OpenAI, et le Model Context Protocol (MCP) pour la gestion dynamique d'outils et les requêtes de données employés.",
   tags: ['Spring AI', 'OpenAI GPT-4', 'Model Context Protocol', 'WhatsApp API', 'Java', 'Spring Boot'],
-  image: 'images/projects/whatapp_bot.gif',
+  image: 'images/projects/whatapp_bot-poster.jpg',
+  video: 'images/projects/whatapp_bot.mp4',
   githubUrl: 'https://github.com/YOUHAD08/WhatsApp-AI-Bot.git',
   featured: false
 };
@@ -449,7 +452,8 @@ PROJECTS[40] = {
   description: 'My first Flutter project – a simple and elegant Todo application built with Flutter, Riverpod (state management), and Slidable (for swipe actions).',
   descriptionFr: "Mon premier projet Flutter – une application Todo simple et élégante construite avec Flutter, Riverpod (gestion d'état) et Slidable (pour les actions de balayage).",
   tags: ['Flutter', 'Dart', 'Riverpod'],
-  image: 'images/projects/TODO_App.gif',
+  image: 'images/projects/TODO_App-poster.jpg',
+  video: 'images/projects/TODO_App.mp4',
   githubUrl: 'https://github.com/YOUHAD08/Flutter-Todo-App.git',
   featured: false
 };
@@ -489,7 +493,8 @@ PROJECTS[44] = {
   description: 'A modern e-banking application built with Angular. It connects to a Spring Boot REST API backend to provide comprehensive customer and account management features.',
   descriptionFr: "Une application bancaire moderne construite avec Angular. Elle se connecte à un backend Spring Boot via REST API pour offrir des fonctionnalités complètes de gestion des clients et des comptes.",
   tags: ['Angular', 'TypeScript', 'Bootstrap', 'JWT Authentication', 'Spring Boot', 'Java', 'Spring Data JPA', 'MySQL', 'REST API'],
-  image: 'images/projects/e-bank-demo.gif',
+  image: 'images/projects/e-bank-demo-poster.jpg',
+  video: 'images/projects/e-bank-demo.mp4',
   githubUrl: 'https://github.com/YOUHAD08/e-bank-frontend-angular.git',
   featured: true
 };

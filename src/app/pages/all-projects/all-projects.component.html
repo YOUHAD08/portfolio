@@ -64,8 +64,20 @@
       >
         <div
           class="all-projects__image"
-          [style.background-image]="project.image ? 'url(' + project.image + ')' : null"
+          [style.background-image]="!project.video && project.image ? 'url(' + project.image + ')' : null"
         >
+          <video
+            *ngIf="project.video"
+            class="all-projects__video"
+            [poster]="project.image"
+            [src]="project.video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          ></video>
+
           <div class="all-projects__image-fade"></div>
 
           <span class="all-projects__in-progress" *ngIf="project.inProgress">{{ t.inProgress }}</span>

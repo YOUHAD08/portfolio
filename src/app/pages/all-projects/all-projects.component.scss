@@ -337,6 +337,14 @@
     align-items: flex-end;
   }
 
+  &__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   &__image-fade {
     position: absolute;
     inset: 0;
