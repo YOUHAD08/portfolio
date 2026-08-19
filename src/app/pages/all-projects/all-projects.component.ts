@@ -55,10 +55,9 @@ const CATEGORY_LABELS_FR: Record<ProjectCategory, string> = {
   'Mobile Dev': 'Mobile',
   DevOps: 'DevOps',
   AWS: 'AWS',
-  SecOps: 'SecOps',
-  'Big Data': 'Big Data',
+  'Big Data / Data Engineering': 'Big Data / Data Engineering',
   MLOps: 'MLOps',
-  'AI/GenAI': 'IA/GenAI'
+  GenAI: 'GenAI'
 };
 
 const CATEGORY_ORDER: ProjectCategory[] = [
@@ -66,10 +65,9 @@ const CATEGORY_ORDER: ProjectCategory[] = [
   'Backend',
   'Frontend',
   'DevOps',
-  'SecOps',
-  'AI/GenAI',
+  'GenAI',
   'MLOps',
-  'Big Data',
+  'Big Data / Data Engineering',
   'Mobile Dev'
 ];
 
@@ -121,7 +119,7 @@ const AWS_TREE: TreeNode[] = [
   { primary: 'AWS Database Migration Service', children: [] },
   { primary: 'AWS DataSync', children: [] },
   { primary: 'AWS Global Accelerator', children: [] },
-  { primary: 'AWS KMS', children: [] },
+  { primary: 'AWS KMS', children: ['Encryption at Rest', 'Customer Managed Keys (CMK)', 'Symmetric Encryption', 'Key Policies'] },
   { primary: 'AWS Lambda', children: [] },
   { primary: 'AWS Management Console', children: [] },
   { primary: 'AWS PrivateLink', children: [] },
@@ -143,8 +141,122 @@ const AWS_TREE: TreeNode[] = [
   { primary: 'AWS CloudTrail', children: [] }
 ];
 
+const BACKEND_TAGS = [
+  'Eureka',
+  'Java',
+  'JWT Authentication',
+  'MinIO',
+  'REST API',
+  'Spring Boot',
+  'Spring Cloud',
+  'Spring Data JPA',
+  'Spring MVC',
+  'Spring Security',
+  'Thymeleaf',
+  'WebFlux',
+  'Firebase',
+  'Nginx'
+];
+
+const FRONTEND_TAGS = ['Angular', 'CSS3', 'EmailJS', 'HTML', 'JavaScript', 'SCSS', 'TypeScript', 'Bootstrap'];
+
+const DEVOPS_TAGS = ['Docker', 'Kubernetes', 'GitHub', 'Jenkins', 'Terraform', 'Linux'];
+
+const GENAI_TAGS = [
+  'AI Agent',
+  'DALL-E 3',
+  'GPT-4',
+  'n8n',
+  'LLM',
+  'MCP',
+  'Multi-Agent',
+  'Multimodal AI',
+  'OpenAI',
+  'OpenAI Embeddings',
+  'OpenAI GPT-4',
+  'OpenAI Whisper',
+  'OpenCV',
+  'Pinecone',
+  'Python',
+  'RAG',
+  'Semantic-Search',
+  'Sentiment Analysis',
+  'Spring AI',
+  'Vector Store',
+  'Voice-to-Text'
+];
+
+const MLOPS_TAGS = [
+  'CML',
+  'Data Validation',
+  'Python',
+  'pytest',
+  'scikit-learn',
+  'SMOTE',
+  'Image Classification',
+  'Image Denoising',
+  'Image Processing',
+  'Image Sharpening',
+  'KNN',
+  'Matplotlib',
+  'Data Visualization',
+  'PyTorch',
+  'MLflow',
+  'DVC',
+  'Jupyter Notebook',
+  'Pandas',
+  'Seaborn'
+];
+
+const BIG_DATA_TAGS = [
+  'Apache Kafka',
+  'Apache Spark',
+  'BI',
+  'Data Modeling',
+  'Data Visualization',
+  'Data Warehouse',
+  'EDA',
+  'ETL',
+  'Hadoop',
+  'Hadoop HDFS',
+  'HDFS',
+  'Kafka Streams',
+  'Kimball Methodology',
+  'MapReduce',
+  'Medallion Architecture',
+  'Spark SQL',
+  'SQL',
+  'SQL Server',
+  'Star Schema',
+  'Time-Series Analysis',
+  'T-SQL',
+  'Redis',
+  'MySQL',
+  'H2 Database'
+];
+
+const MOBILE_TAGS = ['Android', 'Android Studio', 'Dart', 'Flutter', 'Riverpod'];
+
+const CURATED_TAGS: Partial<Record<ProjectCategory, string[]>> = {
+  Backend: BACKEND_TAGS,
+  Frontend: FRONTEND_TAGS,
+  DevOps: DEVOPS_TAGS,
+  GenAI: GENAI_TAGS,
+  MLOps: MLOPS_TAGS,
+  'Big Data / Data Engineering': BIG_DATA_TAGS,
+  'Mobile Dev': MOBILE_TAGS
+};
+
 function buildCategoryGroups(): TagGroup[] {
+  const allTagsUsed = new Set(PROJECTS.flatMap((p) => p.tags));
+
   return CATEGORY_ORDER.map((category) => {
+    const curated = CURATED_TAGS[category];
+    if (curated) {
+      const tags = curated.filter((t) => allTagsUsed.has(t));
+      return { category, tags };
+    }
+
     const usedTags = new Set(PROJECTS.filter((p) => p.category === category).flatMap((p) => p.tags));
     const tags = Array.from(usedTags).sort((a, b) => a.localeCompare(b));
 

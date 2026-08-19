@@ -7,13 +7,13 @@ const TEXT = {
   en: {
     pill: 'About Me',
     heading: 'Skills',
-    intro: 'Building scalable systems across the full stack — from backend architecture to cloud infrastructure, big data, MLOps, SecOps, and generative AI.',
+    intro: 'Building scalable systems across the full stack — from backend architecture to cloud infrastructure, big data, MLOps, and generative AI.',
     highlights: ['Backend & Cloud', 'DevOps & Automation', 'ML & Computer Vision']
   },
   fr: {
     pill: 'À Propos',
     heading: 'Compétences',
-    intro: "Je construis des systèmes évolutifs sur toute la pile technique — de l'architecture backend à l'infrastructure cloud, au big data, au MLOps, au SecOps, et à l'IA générative.",
+    intro: "Je construis des systèmes évolutifs sur toute la pile technique — de l'architecture backend à l'infrastructure cloud, au big data, au MLOps, et à l'IA générative.",
     highlights: ['Backend & Cloud', 'DevOps & Automatisation', 'ML & Vision par Ordinateur']
   }
 };

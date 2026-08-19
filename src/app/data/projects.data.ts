@@ -4,10 +4,9 @@ export type ProjectCategory =
   | 'Mobile Dev'
   | 'DevOps'
   | 'AWS'
-  | 'SecOps'
-  | 'Big Data'
+  | 'Big Data / Data Engineering'
   | 'MLOps'
-  | 'AI/GenAI';
+  | 'GenAI';
 
 export interface Project {
   title: string;
@@ -162,7 +161,7 @@ PROJECTS[11] = {
   title: 'Distributed Microservices E Commerce Blueprint',
   description: 'A Spring Boot microservices reference project demonstrating service discovery, API gateway routing, centralized config management, Feign-based communication, and Resilience4j circuit breakers across six services, each backed by its own H2 database.',
   descriptionFr: "Un projet de référence en microservices Spring Boot illustrant la découverte de services, le routage via API gateway, la gestion centralisée de la configuration, la communication via Feign, et les circuit breakers Resilience4j sur six services, chacun avec sa propre base H2.",
-  tags: ['Java', 'Git', 'GitHub', 'Spring Boot', 'Spring Cloud', 'Microservices Architecture', 'REST API'],
+  tags: ['Java', 'Spring Boot', 'Spring Cloud', 'REST API'],
   category: 'Backend',
   image: 'images/projects/microservices-blueprint.png',
   githubUrl: 'https://github.com/YOUHAD08/Microservices-Architecture.git',
@@ -184,7 +183,7 @@ PROJECTS[13] = {
   title: 'End to End Nginx CI/CD Pipeline (Jenkins + Docker Hub)',
   description: 'A fully automated CI/CD pipeline that builds, tests, publishes, and deploys a containerized nginx web application — triggered automatically on every GitHub push.',
   descriptionFr: "Un pipeline CI/CD entièrement automatisé qui construit, teste, publie et déploie une application web nginx conteneurisée — déclenché automatiquement à chaque push GitHub.",
-  tags: ['Jenkins', 'Docker', 'CI-CD', 'Nginx', 'HTML'],
+  tags: ['Jenkins', 'Docker', 'Nginx'],
   category: 'DevOps',
   image: 'images/projects/jenkins-docker-cicd.png',
   githubUrl: 'https://github.com/YOUHAD08/jenkins-docker-cicd.git',
@@ -195,8 +194,8 @@ PROJECTS[14] = {
   title: 'Full Stack AI Agent with Vector Search & Custom Tools',
   description: 'Full-stack AI application using Spring Boot, Spring AI, and Angular. Features Retrieval-Augmented Generation (RAG) for querying uploaded PDFs and custom tools for fetching live system data.',
   descriptionFr: "Application IA full-stack utilisant Spring Boot, Spring AI et Angular. Intègre la génération augmentée par récupération (RAG) pour interroger des PDF téléversés et des outils personnalisés pour récupérer des données système en direct.",
-  tags: ['Spring Boot', 'Spring AI', 'Angular', 'AI Agent', 'RAG', 'Semantic-Search', 'Vector Store', 'Java', 'TypeScript', 'LLM', 'HTML', 'CSS'],
-  category: 'AI/GenAI',
+  tags: ['AI Agent', 'RAG', 'Semantic-Search', 'Vector Store', 'LLM', 'Spring AI'],
+  category: 'GenAI',
   image: 'images/projects/ai-agent-spring-boot-angular.png',
   githubUrl: 'https://github.com/YOUHAD08/ai-agent-spring-boot-angular.git',
   featured: true
@@ -206,7 +205,7 @@ PROJECTS[15] = {
   title: 'AWS CI/CD Pipeline: CodeBuild & CodeArtifact',
   description: 'Automated AWS pipeline (CodePipeline, CodeBuild, CodeDeploy) connecting GitHub to a CloudFormation-backed web server via CodeArtifact and S3.',
   descriptionFr: "Pipeline AWS automatisé (CodePipeline, CodeBuild, CodeDeploy) connectant GitHub à un serveur web basé sur CloudFormation via CodeArtifact et S3.",
-  tags: ['CodePipeline', 'CodeBuild', 'CodeDeploy', 'Amazon S3', 'AWS CloudFormation', 'Amazon VPC', 'CodeArtifact', 'Amazon EC2'],
+  tags: ['CodePipeline', 'CodeBuild', 'CodeDeploy', 'Amazon S3', 'AWS CloudFormation', 'Amazon VPC', 'CodeArtifact', 'Amazon EC2', 'GitHub'],
   category: 'AWS',
   image: 'images/projects/aws-cicd-pipeline.png',
   githubUrl: 'https://github.com/YOUHAD08/aws-cicd-pipeline.git',
@@ -229,7 +228,7 @@ PROJECTS[17] = {
   description: 'A SQL-based EDA project on a Medallion Sales Data Warehouse using T-SQL and BI views for customer RFM segmentation, product tracking, time-series analysis, and KPI reporting.',
   descriptionFr: "Un projet d'EDA basé sur SQL sur un entrepôt de données de ventes Medallion utilisant T-SQL et des vues BI pour la segmentation RFM des clients, le suivi des produits, l'analyse de séries temporelles et le reporting KPI.",
   tags: ['SQL', 'T-SQL', 'Data Warehouse', 'EDA', 'BI', 'Medallion Architecture', 'Time-Series Analysis', 'ETL'],
-  category: 'Big Data',
+  category: 'Big Data / Data Engineering',
   image: 'images/projects/sql-sales-datawarehouse-analysis.png',
   githubUrl: 'https://github.com/YOUHAD08/sql-sales-datawarehouse-analysis.git',
   featured: true
@@ -240,7 +239,7 @@ PROJECTS[18] = {
   description: 'An OpenCV and Python project for real-time surveillance analysis. Converts video feeds to grayscale, identifies light sources via pixel brightness, and tracks frame-by-frame motion.',
   descriptionFr: "Un projet OpenCV et Python pour l'analyse de surveillance en temps réel. Convertit les flux vidéo en niveaux de gris, identifie les sources lumineuses via la luminosité des pixels, et suit le mouvement image par image.",
   tags: ['OpenCV', 'Python', 'Image Processing', 'Matplotlib', 'Data Visualization'],
-  category: 'AI/GenAI',
+  category: 'MLOps',
   image: 'images/projects/grayscale-motion-detection.png',
   githubUrl: 'https://github.com/YOUHAD08/computer-vision-labs/blob/main/lab-1/01_grayscale_motion_detection.ipynb',
   featured: false
@@ -251,7 +250,7 @@ PROJECTS[19] = {
   description: 'Detect active traffic lights (red, orange, green) in Python using OpenCV HSV color thresholding and mask segmentation.',
   descriptionFr: "Détecte les feux de circulation actifs (rouge, orange, vert) en Python avec le seuillage de couleur HSV d'OpenCV et la segmentation par masque.",
   tags: ['OpenCV', 'Python', 'Image Processing'],
-  category: 'AI/GenAI',
+  category: 'MLOps',
   image: 'images/projects/traffic-light-color-spaces.png',
   githubUrl: 'https://github.com/YOUHAD08/computer-vision-labs/blob/main/lab-1/02_traffic_light_color_spaces.ipynb',
   featured: false
@@ -262,7 +261,7 @@ PROJECTS[20] = {
   description: 'Annotate a football match image with bounding boxes, directional arrows, and text using OpenCV drawing functions to highlight ball location and shot speed.',
   descriptionFr: "Annote une image de match de football avec des boîtes englobantes, des flèches directionnelles et du texte via les fonctions de dessin d'OpenCV pour mettre en évidence la position du ballon et la vitesse du tir.",
   tags: ['OpenCV', 'Python', 'Image Processing'],
-  category: 'AI/GenAI',
+  category: 'MLOps',
   image: 'images/projects/football-annotations.png',
   githubUrl: 'https://github.com/YOUHAD08/computer-vision-labs/blob/main/lab-1/03_drawing_football_annotations.ipynb',
   featured: false
@@ -273,7 +272,7 @@ PROJECTS[21] = {
   description: 'Straighten tilted photos in Python using OpenCV affine transformations. Calculates rotation matrices to align and correct camera tilt angles.',
   descriptionFr: "Redresse des photos inclinées en Python avec les transformations affines d'OpenCV. Calcule les matrices de rotation pour aligner et corriger les angles d'inclinaison de la caméra.",
   tags: ['OpenCV', 'Python', 'Image Processing'],
-  category: 'AI/GenAI',
+  category: 'MLOps',
   image: 'images/projects/image_transformations.png',
   githubUrl: 'https://github.com/YOUHAD08/computer-vision-labs/blob/main/lab-1/04_image_transformations.ipynb',
   featured: false
@@ -284,7 +283,7 @@ PROJECTS[22] = {
   description: "Enhances low-contrast satellite images and segments clouds from water bodies using histogram equalization and Otsu's automatic thresholding.",
   descriptionFr: "Améliore les images satellite à faible contraste et segmente les nuages des étendues d'eau via l'égalisation d'histogramme et le seuillage automatique d'Otsu.",
   tags: ['OpenCV', 'Python', 'Image Processing'],
-  category: 'AI/GenAI',
+  category: 'MLOps',
   image: 'images/projects/thresholding_histograms.png',
   githubUrl: 'https://github.com/YOUHAD08/computer-vision-labs/blob/main/lab-1/06_thresholding_histograms.ipynb',
   featured: false
@@ -295,7 +294,7 @@ PROJECTS[23] = {
   description: 'Python script using OpenCV and Matplotlib to enhance low-light photos via gamma correction (γ = 1.6) and contrast adjustment. Includes histogram analysis comparing intensity distributions.',
   descriptionFr: "Script Python utilisant OpenCV et Matplotlib pour améliorer les photos en basse lumière via la correction gamma (γ = 1.6) et l'ajustement du contraste. Inclut une analyse d'histogramme comparant les distributions d'intensité.",
   tags: ['OpenCV', 'Python', 'Image Processing'],
-  category: 'AI/GenAI',
+  category: 'MLOps',
   image: 'images/projects/gamma_correction_enhancement.png',
   githubUrl: 'https://github.com/YOUHAD08/computer-vision-labs/blob/main/lab-1/07_gamma_correction_enhancement.ipynb',
   featured: false
@@ -305,8 +304,8 @@ PROJECTS[24] = {
   title: 'Image Denoising & Sharpening with OpenCV',
   description: 'Python implementation analyzing spatial filters (Gaussian, Median, Bilateral, NL-Means) and 2D convolution sharpening to remove artificial noise and restore image details.',
   descriptionFr: "Implémentation Python analysant les filtres spatiaux (Gaussien, Médian, Bilatéral, NL-Means) et la netteté par convolution 2D pour supprimer le bruit artificiel et restaurer les détails de l'image.",
-  tags: ['OpenCV', 'Image Denoising', 'Convolution', 'Image Sharpening', 'Python'],
-  category: 'AI/GenAI',
+  tags: ['OpenCV', 'Image Denoising', 'Image Sharpening', 'Python'],
+  category: 'MLOps',
   image: 'images/projects/convolutions_blurring_sharpening.png',
   githubUrl: 'https://github.com/YOUHAD08/computer-vision-labs/blob/main/lab-1/08_convolutions_blurring_sharpening.ipynb',
   featured: false
@@ -316,8 +315,8 @@ PROJECTS[25] = {
   title: 'Scikit Image Histogram Specification in OpenCV',
   description: 'Implementation of image histogram matching using skimage.exposure.match_histograms and OpenCV.',
   descriptionFr: "Implémentation de la correspondance d'histogrammes d'images utilisant skimage.exposure.match_histograms et OpenCV.",
-  tags: ['OpenCV', 'scikit-image', 'Histogram Specification', 'Image Processing', 'Python'],
-  category: 'AI/GenAI',
+  tags: ['OpenCV', 'Image Processing', 'Python'],
+  category: 'MLOps',
   image: 'images/projects/histogram_specification.png',
   githubUrl: 'https://github.com/YOUHAD08/computer-vision-labs/blob/main/lab-1/09_histogram_specification.ipynb',
   featured: false
@@ -327,8 +326,8 @@ PROJECTS[26] = {
   title: 'KNN Classification and Cross Validation on CIFAR 10',
   description: 'Evaluating K-Nearest Neighbors image classification performance across multiple K values using cross-validation on CIFAR-10 image vectors.',
   descriptionFr: "Évaluation de la performance de classification d'images K-Nearest Neighbors sur plusieurs valeurs de K en utilisant la validation croisée sur les vecteurs d'images CIFAR-10.",
-  tags: ['KNN', 'CIFAR-10', 'Cross-Validation', 'scikit-learn', 'Python', 'Image Classification'],
-  category: 'AI/GenAI',
+  tags: ['KNN', 'scikit-learn', 'Python', 'Image Classification'],
+  category: 'MLOps',
   image: 'images/projects/KNN_CIFAR10.png',
   githubUrl: 'https://github.com/YOUHAD08/computer-vision-labs/blob/main/lab-2/KNN_CIFAR10.ipynb',
   featured: false
@@ -338,8 +337,8 @@ PROJECTS[27] = {
   title: 'Sales Data Warehouse',
   description: 'A production-ready SQL Server data warehouse using the Medallion Architecture (Bronze, Silver, Gold) and a star schema to unify CRM and ERP data for sales, customer, and product analytics.',
   descriptionFr: "Un entrepôt de données SQL Server prêt pour la production utilisant l'architecture Medallion (Bronze, Silver, Gold) et un schéma en étoile pour unifier les données CRM et ERP pour l'analyse des ventes, des clients et des produits.",
-  tags: ['SQL Server', 'Data Warehouse', 'Medallion Architecture', 'ETL', 'Star Schema', 'T-SQL', 'Data Engineering', 'BI', 'Data Modeling', 'Kimball Methodology'],
-  category: 'Big Data',
+  tags: ['SQL Server', 'Data Warehouse', 'Medallion Architecture', 'ETL', 'Star Schema', 'T-SQL', 'BI', 'Data Modeling', 'Kimball Methodology'],
+  category: 'Big Data / Data Engineering',
   image: 'images/projects/sql_data_warehouse.png',
   githubUrl: 'https://github.com/YOUHAD08/sql_data_warehouse',
   featured: false
@@ -349,7 +348,7 @@ PROJECTS[28] = {
   title: 'Spring Cloud & Kafka Real-Time Event Pipeline',
   description: 'An event-driven pipeline built with Spring Boot, Spring Cloud Stream, and Apache Kafka. Features automated event ingestion, windowed Kafka Streams aggregations, state store queries, and a live WebFlux SSE dashboard.',
   descriptionFr: "Un pipeline événementiel construit avec Spring Boot, Spring Cloud Stream et Apache Kafka. Comprend l'ingestion automatisée d'événements, des agrégations Kafka Streams fenêtrées, des requêtes sur state store, et un tableau de bord SSE en direct via WebFlux.",
-  tags: ['Spring Boot', 'Apache Kafka', 'Kafka Streams', 'Event-Driven Architecture', 'WebFlux', 'Docker'],
+  tags: ['Spring Boot', 'WebFlux'],
   category: 'Backend',
   image: 'images/projects/kafka-event-pipeline-poster.jpg',
   video: 'images/projects/kafka-event-pipeline.mp4',
@@ -361,8 +360,8 @@ PROJECTS[29] = {
   title: 'WhatsApp Agent',
   description: 'Multimodal AI assistant handling WhatsApp text/voice messages, managing Gmail and Google Calendar, and executing team operations via sub-workflows.',
   descriptionFr: "Assistant IA multimodal gérant les messages texte/vocaux WhatsApp, la gestion de Gmail et Google Calendar, et l'exécution d'opérations d'équipe via des sous-workflows.",
-  tags: ['n8n', 'WhatsApp API', 'OpenAI Whisper', 'GPT-4', 'Google Workspace'],
-  category: 'AI/GenAI',
+  tags: ['n8n', 'OpenAI Whisper', 'GPT-4'],
+  category: 'GenAI',
   image: 'images/projects/whatsapp-agent.png',
   githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/WhatsApp%20Agent',
   featured: true
@@ -372,8 +371,8 @@ PROJECTS[30] = {
   title: 'Vector Database Pipeline',
   description: 'Automated ingestion pipeline monitoring Google Drive to chunk documents, generate embeddings, and store them in Pinecone for semantic search.',
   descriptionFr: "Pipeline d'ingestion automatisé surveillant Google Drive pour découper les documents, générer des embeddings et les stocker dans Pinecone pour la recherche sémantique.",
-  tags: ['n8n', 'Pinecone', 'OpenAI Embeddings', 'Google Drive', 'RAG'],
-  category: 'AI/GenAI',
+  tags: ['n8n', 'Pinecone', 'OpenAI Embeddings', 'RAG'],
+  category: 'GenAI',
   image: 'images/projects/vector-database-pipeline.jpg',
   githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Vector%20Database',
   featured: false
@@ -383,8 +382,8 @@ PROJECTS[31] = {
   title: 'Sentiment Analysis Collector',
   description: 'Public web form system that collects user feedback, categorizes sentiment using GPT-4 mini, and logs responses directly into Google Sheets.',
   descriptionFr: "Système de formulaire web public qui collecte les retours utilisateurs, catégorise le sentiment via GPT-4 mini, et enregistre les réponses directement dans Google Sheets.",
-  tags: ['n8n', 'OpenAI', 'Google Sheets', 'Sentiment Analysis'],
-  category: 'AI/GenAI',
+  tags: ['n8n', 'OpenAI', 'Sentiment Analysis'],
+  category: 'GenAI',
   image: 'images/projects/sentiment-analysis-collector.jpg',
   githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Sentiment%20Analysis',
   featured: false
@@ -394,8 +393,8 @@ PROJECTS[32] = {
   title: 'Sponsorship Response Automation',
   description: 'Email pipeline that identifies sponsorship inquiries via Gmail, checks criteria, and auto-generates custom rate responses using AI.',
   descriptionFr: "Pipeline d'emails qui identifie les demandes de sponsoring via Gmail, vérifie les critères, et génère automatiquement des réponses tarifaires personnalisées grâce à l'IA.",
-  tags: ['n8n', 'Gmail API', 'OpenAI'],
-  category: 'AI/GenAI',
+  tags: ['n8n', 'OpenAI'],
+  category: 'GenAI',
   image: 'images/projects/sponsorship-response-automation.png',
   githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Respond%20to%20Sponsership',
   featured: false
@@ -406,7 +405,7 @@ PROJECTS[33] = {
   description: 'Conversational interface connected to a Pinecone vector store to deliver context-aware, source-attributed Q&A on corporate financial reports.',
   descriptionFr: "Interface conversationnelle connectée à une base vectorielle Pinecone pour fournir des réponses contextuelles et sourcées sur des rapports financiers d'entreprise.",
   tags: ['n8n', 'RAG', 'Pinecone', 'GPT-4'],
-  category: 'AI/GenAI',
+  category: 'GenAI',
   image: 'images/projects/financial-rag-chatbot.png',
   githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/RAG%20Chatbot',
   featured: false
@@ -416,8 +415,8 @@ PROJECTS[34] = {
   title: 'Sheet Generator Utility',
   description: 'Lightweight automation flow designed to programmatically initialize and configure new Google Sheets spreadsheets on demand.',
   descriptionFr: "Flux d'automatisation léger conçu pour initialiser et configurer de manière programmatique de nouvelles feuilles de calcul Google Sheets à la demande.",
-  tags: ['n8n', 'Google Sheets'],
-  category: 'AI/GenAI',
+  tags: ['n8n'],
+  category: 'GenAI',
   image: 'images/projects/sheet-generator-utility.jpg',
   githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Google%20Sheets',
   featured: false
@@ -427,8 +426,8 @@ PROJECTS[35] = {
   title: 'Form Booking with Local Backup',
   description: 'Hotel reservation form processing workflow that logs submissions to Airtable while converting and backing up records locally.',
   descriptionFr: "Workflow de traitement de formulaire de réservation hôtelière qui enregistre les soumissions dans Airtable tout en convertissant et sauvegardant les enregistrements localement.",
-  tags: ['n8n', 'Airtable'],
-  category: 'AI/GenAI',
+  tags: ['n8n'],
+  category: 'GenAI',
   image: 'images/projects/form-booking-local-backup.jpg',
   githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Form%20Submission%20to%20Airtable',
   featured: false
@@ -438,8 +437,8 @@ PROJECTS[36] = {
   title: 'Order Notification Assistant',
   description: 'E-commerce tracking workflow that monitors Airtable for new orders and triggers AI-formatted notification emails to management.',
   descriptionFr: "Workflow de suivi e-commerce qui surveille Airtable pour les nouvelles commandes et déclenche des emails de notification formatés par IA vers la direction.",
-  tags: ['n8n', 'Airtable', 'Gmail API', 'OpenAI'],
-  category: 'AI/GenAI',
+  tags: ['n8n', 'OpenAI'],
+  category: 'GenAI',
   image: 'images/projects/order-notification-assistant.jpg',
   githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/Customer%20Service%20Assitance',
   featured: false
@@ -449,8 +448,8 @@ PROJECTS[37] = {
   title: 'AI Email Automation System',
   description: 'Multi-agent pipeline integrating vector contact lookups, custom HTML templating, and AI composition to execute targeted email outreach.',
   descriptionFr: "Pipeline multi-agents intégrant la recherche de contacts vectorielle, un templating HTML personnalisé, et la composition par IA pour exécuter des campagnes d'emailing ciblées.",
-  tags: ['n8n', 'Pinecone', 'Gmail API', 'GPT-4', 'Multi-Agent'],
-  category: 'AI/GenAI',
+  tags: ['n8n', 'Pinecone', 'GPT-4', 'Multi-Agent'],
+  category: 'GenAI',
   image: 'images/projects/ai-email-automation-system.png',
   githubUrl: 'https://github.com/YOUHAD08/N8N/tree/main/AI-powered%20email%20automation%20system',
   featured: false
@@ -460,8 +459,8 @@ PROJECTS[38] = {
   title: 'WhatsApp AI Bot',
   description: "An intelligent WhatsApp chatbot powered by Spring AI, OpenAI's GPT-4, and Model Context Protocol (MCP) for dynamic tool management and employee data queries.",
   descriptionFr: "Un chatbot WhatsApp intelligent propulsé par Spring AI, GPT-4 d'OpenAI, et le Model Context Protocol (MCP) pour la gestion dynamique d'outils et les requêtes de données employés.",
-  tags: ['Spring AI', 'OpenAI GPT-4', 'Model Context Protocol', 'WhatsApp API', 'Java', 'Spring Boot'],
-  category: 'AI/GenAI',
+  tags: ['Spring AI', 'OpenAI GPT-4', 'MCP'],
+  category: 'GenAI',
   image: 'images/projects/whatapp_bot-poster.jpg',
   video: 'images/projects/whatapp_bot.mp4',
   githubUrl: 'https://github.com/YOUHAD08/WhatsApp-AI-Bot.git',
@@ -507,7 +506,7 @@ PROJECTS[42] = {
   title: 'Swai3.com — Moroccan Bac Tutoring Platform',
   description: 'Microservices tutoring marketplace for Moroccan Bac students. Book tutors, pay securely, attend sessions via Google Meet, and access study materials — all in one platform.',
   descriptionFr: "Marketplace de tutorat en microservices pour les élèves marocains du Bac. Réservez des tuteurs, payez en toute sécurité, assistez aux séances via Google Meet, et accédez aux supports de cours — le tout sur une seule plateforme.",
-  tags: ['Java', 'Spring Boot', 'Microservices', 'Kafka', 'PostgreSQL', 'Docker', 'Jenkins', 'MinIO', 'Spring Cloud', 'Eureka', 'Redis', 'Kubernetes', 'AWS'],
+  tags: ['Java', 'Spring Boot', 'MinIO', 'Spring Cloud', 'Eureka', 'Kubernetes', 'Redis'],
   category: 'Backend',
   image: 'images/projects/logo.jpeg',
   featured: true,
@@ -518,8 +517,8 @@ PROJECTS[43] = {
   title: 'Spring Boot Generative AI Demo',
   description: 'A Spring Boot application showcasing Spring AI capabilities, including contextual chat, structured JSON output mapping, DALL-E 3 image generation, multimodal image analysis, and real-time response streaming.',
   descriptionFr: "Une application Spring Boot présentant les capacités de Spring AI, incluant le chat contextuel, le mapping de sortie JSON structurée, la génération d'images DALL-E 3, l'analyse d'images multimodale, et le streaming de réponses en temps réel.",
-  tags: ['Spring Boot', 'Spring AI', 'OpenAI', 'Multimodal AI', 'DALL-E 3'],
-  category: 'AI/GenAI',
+  tags: ['Spring AI', 'OpenAI', 'Multimodal AI', 'DALL-E 3'],
+  category: 'GenAI',
   image: 'images/projects/Gen-demo.png',
   githubUrl: 'https://github.com/YOUHAD08/Gen-AI-Spring-Boot.git',
   featured: false
@@ -529,7 +528,7 @@ PROJECTS[44] = {
   title: 'E-Bank Management System',
   description: 'A modern e-banking application built with Angular. It connects to a Spring Boot REST API backend to provide comprehensive customer and account management features.',
   descriptionFr: "Une application bancaire moderne construite avec Angular. Elle se connecte à un backend Spring Boot via REST API pour offrir des fonctionnalités complètes de gestion des clients et des comptes.",
-  tags: ['Angular', 'TypeScript', 'Bootstrap', 'JWT Authentication', 'Spring Boot', 'Java', 'Spring Data JPA', 'MySQL', 'REST API'],
+  tags: ['JWT Authentication', 'Spring Boot', 'Java', 'Spring Data JPA', 'REST API', 'Bootstrap', 'MySQL'],
   category: 'Backend',
   image: 'images/projects/e-bank-demo-poster.jpg',
   video: 'images/projects/e-bank-demo.mp4',
@@ -541,7 +540,7 @@ PROJECTS[45] = {
   title: 'Product Management System',
   description: 'A full-stack product management web application featuring a Spring Boot REST API, an Angular 17 client UI, and an in-memory H2 database for real-time CRUD operations.',
   descriptionFr: "Une application web de gestion de produits full-stack avec une API REST Spring Boot, une interface client Angular 17, et une base de données H2 en mémoire pour des opérations CRUD en temps réel.",
-  tags: ['Spring Boot', 'Angular', 'H2 Database', 'REST API', 'Java', 'TypeScript'],
+  tags: ['Spring Boot', 'REST API', 'Java', 'H2 Database'],
   category: 'Backend',
   image: 'images/projects/home-page.png',
   githubUrl: 'https://github.com/YOUHAD08/product-management-system.git',
@@ -563,7 +562,7 @@ PROJECTS[47] = {
   title: 'Number Guessing Android App',
   description: 'A localized Java Android app where users guess a secret number with real-time feedback, attempt counters, score tracking, and a dark-mode interface.',
   descriptionFr: "Une application Android Java localisée où les utilisateurs devinent un nombre secret avec des retours en temps réel, un compteur de tentatives, un suivi du score, et une interface en mode sombre.",
-  tags: ['Android', 'Java', 'Android Studio'],
+  tags: ['Android', 'Android Studio'],
   category: 'Mobile Dev',
   image: 'images/projects/App.png',
   githubUrl: 'https://github.com/YOUHAD08/Number-Guessing-Game---Android-App.git',
@@ -574,8 +573,8 @@ PROJECTS[48] = {
   title: 'Kafka Streams Weather Data Processor',
   description: 'A real-time Kafka Streams application that filters, transforms, and computes station-wise average temperature and humidity metrics from weather streams deployed via Docker.',
   descriptionFr: "Une application Kafka Streams en temps réel qui filtre, transforme et calcule les métriques moyennes de température et d'humidité par station à partir de flux météo déployés via Docker.",
-  tags: ['Apache Kafka', 'Kafka Streams', 'Java', 'Docker'],
-  category: 'Big Data',
+  tags: ['Apache Kafka', 'Kafka Streams'],
+  category: 'Big Data / Data Engineering',
   image: 'images/projects/Weather%20Data%20Processor.png',
   githubUrl: 'https://github.com/YOUHAD08/Kafka-Streams-Weather-Data-Processor.git',
   featured: true
@@ -585,8 +584,8 @@ PROJECTS[49] = {
   title: 'Spark Incident Analyzer',
   description: 'An Apache Spark SQL application in Java that parses industrial service incident logs from CSV, aggregates incident counts by service, and extracts top incident-heavy years using Spark DataFrame transformations.',
   descriptionFr: "Une application Apache Spark SQL en Java qui analyse des journaux d'incidents de service industriel depuis un CSV, agrège le nombre d'incidents par service, et extrait les années les plus critiques via des transformations Spark DataFrame.",
-  tags: ['Apache Spark', 'Spark SQL', 'Java', 'Maven'],
-  category: 'Big Data',
+  tags: ['Apache Spark', 'Spark SQL'],
+  category: 'Big Data / Data Engineering',
   image: 'images/projects/Spark%20Incident%20Analyzer.png',
   githubUrl: 'https://github.com/YOUHAD08/spark-incident-analyzer.git',
   featured: false
@@ -596,8 +595,8 @@ PROJECTS[50] = {
   title: 'Apache Spark Sales Processor',
   description: 'Java-based Apache Spark data pipelines that aggregate enterprise sales metrics per city and per year in local and distributed cluster environments using Dockerized Hadoop HDFS.',
   descriptionFr: "Des pipelines de données Apache Spark en Java qui agrègent les métriques de ventes d'entreprise par ville et par année, en environnements locaux et clusters distribués via Hadoop HDFS conteneurisé.",
-  tags: ['Apache Spark', 'Java', 'Hadoop HDFS', 'Docker', 'MapReduce'],
-  category: 'Big Data',
+  tags: ['Apache Spark', 'Hadoop HDFS', 'MapReduce'],
+  category: 'Big Data / Data Engineering',
   image: 'images/projects/Apache-Spark-Sales-Processor.png',
   githubUrl: 'https://github.com/YOUHAD08/Apache-Spark-Sales-Processor.git',
   featured: false
@@ -607,8 +606,8 @@ PROJECTS[51] = {
   title: 'Sales Analysis Dashboard',
   description: 'A Python data analysis project utilizing Pandas, NumPy, and Seaborn to analyze multi-sheet sales data (2018–2019), generating YoY growth metrics, customer rankings, channel profitability analyses, and integrated dashboard visualizations.',
   descriptionFr: "Un projet d'analyse de données Python utilisant Pandas, NumPy et Seaborn pour analyser des données de ventes multi-feuilles (2018-2019), générant des métriques de croissance annuelle, des classements clients, des analyses de rentabilité par canal, et des visualisations de tableau de bord intégrées.",
-  tags: ['Python', 'Pandas', 'Data Analysis', 'Matplotlib', 'Seaborn', 'Jupyter Notebook', 'Data Visualization'],
-  category: 'Big Data',
+  tags: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Jupyter Notebook', 'Data Visualization'],
+  category: 'Big Data / Data Engineering',
   image: 'images/projects/Sales%20Analysis%20Project.png',
   githubUrl: 'https://github.com/YOUHAD08/Sales-Analysis-Project.git',
   featured: false
@@ -618,8 +617,8 @@ PROJECTS[52] = {
   title: 'HDFS Operations Practicum',
   description: 'A hands-on guide and practical demonstration covering fundamental Hadoop Distributed File System (HDFS) CLI operations, including directory creation, file I/O, local-to-HDFS data transfers, and recursive system maintenance.',
   descriptionFr: "Un guide pratique et une démonstration couvrant les opérations CLI fondamentales du système de fichiers distribué Hadoop (HDFS), incluant la création de répertoires, les I/O de fichiers, les transferts de données locales vers HDFS, et la maintenance système récursive.",
-  tags: ['HDFS', 'Hadoop', 'CLI', 'Data Engineering'],
-  category: 'Big Data',
+  tags: ['HDFS', 'Hadoop'],
+  category: 'Big Data / Data Engineering',
   image: 'images/projects/HDFS%20File%20System%20Manipulation.png',
   githubUrl: 'https://github.com/YOUHAD08/HDFS-File-System-Manipulation.git',
   featured: false
@@ -641,7 +640,7 @@ PROJECTS[54] = {
   description: 'An AWS security implementation utilizing Identity and Access Management (IAM) to enforce tag-based conditional access controls, least-privilege user groups, custom JSON policies, and account aliases across dev and prod EC2 environments.',
   descriptionFr: "Une implémentation de sécurité AWS utilisant Identity and Access Management (IAM) pour appliquer des contrôles d'accès conditionnels basés sur les tags, des groupes d'utilisateurs à moindre privilège, des politiques JSON personnalisées, et des alias de compte entre les environnements EC2 dev et prod.",
   tags: ['AWS IAM', 'Amazon EC2'],
-  category: 'SecOps',
+  category: 'AWS',
   image: 'images/projects/Cloud%20Security%20with%20AWS%20IAM.png',
   githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/tree/main/01-aws-basics/03-aws-iam-security',
   featured: false
@@ -707,7 +706,7 @@ PROJECTS[60] = {
   description: 'An AWS cloud security project demonstrating server-side encryption at rest using AWS KMS Customer Managed Keys (CMKs) to secure an Amazon DynamoDB table, testing layered defense through fine-grained IAM policy restrictions and key usage permissions.',
   descriptionFr: "Un projet de sécurité cloud AWS démontrant le chiffrement côté serveur au repos avec des clés gérées par le client (CMK) AWS KMS pour sécuriser une table Amazon DynamoDB, testant une défense en profondeur via des restrictions de politique IAM granulaires et des permissions d'utilisation de clés.",
   tags: ['AWS KMS', 'Amazon DynamoDB', 'AWS IAM', 'Encryption at Rest', 'Customer Managed Keys (CMK)', 'Symmetric Encryption', 'Key Policies'],
-  category: 'SecOps',
+  category: 'AWS',
   image: 'images/projects/Encrypt%20Data%20with%20AWS%20KMS.png',
   githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/04-security/18-encrypt-data-with-kms/aws-security-kms.md',
   featured: false
@@ -729,7 +728,7 @@ PROJECTS[62] = {
   description: 'An AWS cloud security project demonstrating the remediation of hardcoded credentials in a FastAPI Python web application by integrating AWS Secrets Manager via Boto3, triggering GitHub Secret Scanning protections, and performing Git rebasing to purge sensitive history from the commit log.',
   descriptionFr: "Un projet de sécurité cloud AWS démontrant la remédiation d'identifiants codés en dur dans une application web Python FastAPI en intégrant AWS Secrets Manager via Boto3, déclenchant les protections GitHub Secret Scanning, et effectuant un rebase Git pour purger l'historique sensible du journal des commits.",
   tags: ['AWS Secrets Manager', 'AWS IAM', 'Amazon S3', 'AWS Management Console'],
-  category: 'SecOps',
+  category: 'AWS',
   image: 'images/projects/Secure%20Secrets%20with%20Secrets%20Manager.png',
   githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/04-security/20-secrets-manager/aws-security-secrets-manager.md',
   featured: false
@@ -772,7 +771,7 @@ PROJECTS[66] = {
   title: 'Create S3 Buckets with Terraform',
   description: 'A Terraform-based Infrastructure as Code (IaC) project automating AWS S3 storage provisioning, covering provider configuration, AWS credentials, resource definitions, tagging, and the terraform init → plan → apply workflow for creating buckets and uploading objects.',
   descriptionFr: "Un projet d'Infrastructure as Code (IaC) basé sur Terraform automatisant le provisionnement de stockage AWS S3, couvrant la configuration du provider, les identifiants AWS, les définitions de ressources, le tagging, et le workflow terraform init → plan → apply pour créer des buckets et téléverser des objets.",
-  tags: ['Amazon S3', 'AWS CLI', 'AWS IAM', 'Terraform'],
+  tags: ['Terraform'],
   category: 'DevOps',
   image: 'images/projects/Create%20S3%20Buckets%20with%20Terraform.png',
   githubUrl: 'https://github.com/YOUHAD08/aws-cloud-projects/blob/main/06-devops/40-terraform-s3/aws-devops-terraform.md',
@@ -783,7 +782,7 @@ PROJECTS[67] = {
   title: 'AWS EC2 Web Server Deployment & Custom AMI',
   description: 'Hands-on AWS project deploying and configuring an EC2 web server with automated Apache installation using User Data, Elastic IP, IMDSv2, CloudWatch monitoring, and a custom AMI for reusable multi-AZ deployments.',
   descriptionFr: "Projet AWS pratique consistant à déployer et configurer un serveur web EC2 avec installation automatisée d'Apache via User Data, une Elastic IP, IMDSv2, une surveillance CloudWatch, et une AMI personnalisée pour des déploiements multi-AZ réutilisables.",
-  tags: ['Amazon EC2', 'Elastic IP', 'AMI', 'Amazon CloudWatch', 'Amazon EBS', 'Security Groups'],
+  tags: ['Amazon EC2', 'Elastic IP', 'AMI', 'Amazon CloudWatch', 'Amazon EBS', 'Security Groups', 'Linux'],
   category: 'AWS',
   image: 'images/projects/Launch%20and%20Configure%20an%20EC2%20Instance.png',
   docUrl: 'https://nextwork.ai/radiant_cyan_daring_clementine/docs/8caf04e1-4b52-408f-8b41-e08ba2f7798e',
